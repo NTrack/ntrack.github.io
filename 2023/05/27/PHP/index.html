@@ -413,14 +413,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    552
+                    157
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -438,31 +438,31 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="用户代理（User-Agent，简称-UA）"><a href="#用户代理（User-Agent，简称-UA）" class="headerlink" title="用户代理（User Agent，简称 UA）"></a>用户代理（User Agent，简称 UA）</h2><p><strong>意义:<strong>一个特殊字符串头，使得</strong>服务器</strong>能够识别客户使用的 操作系统 及版本、CPU 类型、 浏览器 及版本、浏览器渲染引擎、浏览器语言、 浏览器插件 等 <a target="_blank" rel="noopener" href="https://useragent.buyaocha.com/">在线本机识别 UA</a></p>
-<br>
+                <h1 id="考点："><a href="#考点：" class="headerlink" title="考点："></a>考点：</h1><h2 id="1-PHP比较类型"><a href="#1-PHP比较类型" class="headerlink" title="1.PHP比较类型"></a>1.PHP比较类型</h2><ol>
+<li><p>弱类型（&#x3D;&#x3D;)</p>
+<p>会先把字符串类型转化成相同，再进行比较。<strong>该字符串的开始部分决定了它的值，如果该字符串以合法的数值开始，则使用该数值，否则其值为0</strong></p>
+<pre class="line-numbers language-php" data-language="php"><code class="language-php">例子：
+<span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"123"</span><span class="token operator">==</span><span class="token number">123</span><span class="token punctuation">)</span>  <span class="token comment">//true</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"12admin"</span><span class="token operator">==</span><span class="token number">12</span><span class="token punctuation">)</span> <span class="token comment">//true</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"admin12"</span><span class="token operator">==</span><span class="token number">12</span><span class="token punctuation">)</span>  <span class="token comment">//false</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"admin12"</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment">//true</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"1e1"</span><span class="token operator">==</span><span class="token number">1e1</span><span class="token punctuation">)</span>  <span class="token comment">//true</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"0e1"</span><span class="token operator">==</span><span class="token number">0e102301</span><span class="token punctuation">)</span>  <span class="token comment">//true	e是科学计数法，0乘以任何数都等于0</span>
+<span class="token delimiter important">?></span></span> 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="PC端UA信息解读"><a href="#PC端UA信息解读" class="headerlink" title="PC端UA信息解读:"></a>PC端UA信息解读:</h3><p>例子:Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;108.0.0.0 Safari&#x2F;537.36 <strong>Mozilla&#x2F;5.0  (平台) 引擎版本 浏览器版本号</strong></p>
-<br>
-<br>
 
-<h4 id="1-Mozilla-x2F-5-0"><a href="#1-Mozilla-x2F-5-0" class="headerlink" title="1.Mozilla&#x2F;5.0"></a>1.Mozilla&#x2F;5.0</h4><blockquote>
-<p>以前获取具有图文的网页，就必须宣称自己是 Mozilla 浏览器。因此导致如今User-Agent里通常都带有Mozilla字样<br><br></p>
-</blockquote>
-<h4 id="2-Windows-NT-10-0-Win64-x64"><a href="#2-Windows-NT-10-0-Win64-x64" class="headerlink" title="2.Windows NT 10.0; Win64; x64"></a>2.Windows NT 10.0; Win64; x64</h4><p>64位Windows 10操作系统</p>
-<blockquote>
-<p>Windows系统下:<br>Windows NT 5.0 &#x2F;&#x2F; 如 Windows 2000<br>Windows NT 5.1 &#x2F;&#x2F; 如 Windows XP<br>Windows NT 6.0 &#x2F;&#x2F; 如 Windows Vista<br>Windows NT 6.1 &#x2F;&#x2F; 如 Windows 7<br>Windows NT 6.2 &#x2F;&#x2F; 如 Windows 8<br>Windows NT 6.3 &#x2F;&#x2F; 如 Windows 8.1<br>Windows NT 10.0 &#x2F;&#x2F; 如 Windows 10<br>Win64; x64 &#x2F;&#x2F; Win64 on x64<br>WOW64 &#x2F;&#x2F; Win32 on x64<br><br>Linux系统下：<br>X11; Linux i686; &#x2F;&#x2F; Linux 桌面，i686 版本<br>X11; Linux x86_64; &#x2F;&#x2F; Linux 桌面，x86_64 版本<br>X11; Linux i686 on x86_64 &#x2F;&#x2F; Linux 桌面，运行在 x86_64 的 i686 版本<br><br>MacOS系统下：<br>Macintosh; Intel Mac OS X 10_9_0 &#x2F;&#x2F; Intel x86 或者 x86_64<br>Macintosh; PPC Mac OS X 10_9_0 &#x2F;&#x2F; PowerPC<br>Macintosh; Intel Mac OS X 10.12; &#x2F;&#x2F; 不用下划线，用点</p>
-</blockquote>
-<h4 id="3-AppleWebKit-x2F-537-36-KHTML-like-Gecko"><a href="#3-AppleWebKit-x2F-537-36-KHTML-like-Gecko" class="headerlink" title="3.AppleWebKit&#x2F;537.36 (KHTML, like Gecko)"></a>3.AppleWebKit&#x2F;537.36 (KHTML, like Gecko)</h4><p>引擎版本</p>
-<blockquote>
-<p>苹果依靠了<strong>WebKit内核</strong>开发出<strong>Safari浏览器</strong>，WebKit包含了<strong>WebCore引擎</strong>，而WebCore又从<strong>KHTML</strong>衍生而来。由于历史原因，KHTML引擎需要声明自己是“类似Gecko”的，因此引擎部分这么写。再后来，Google开发Chrome也是用了WebKit内核，于是也跟着这么写。<br>WebKit 是一个开源的浏览器引擎，与之相对应的引擎有Gecko（Mozilla Firefox 等使用），Trident（也称MSHTML，IE 使用）和EdgeHTML（也称Chakra，Edge和其他UWP浏览器使用）<br><br>IE伪装成 Mozilla<br>webKit 伪装成 KHTML<br>KHTML 伪装成 Gecko</p>
-</blockquote>
-<h4 id="4-Chrome-x2F-108-0-0-0-Safari-x2F-537-36"><a href="#4-Chrome-x2F-108-0-0-0-Safari-x2F-537-36" class="headerlink" title="4.Chrome&#x2F;108.0.0.0 Safari&#x2F;537.36"></a>4.Chrome&#x2F;108.0.0.0 Safari&#x2F;537.36</h4><p>浏览器版本号</p>
-<blockquote>
-<p>Chrome&#x2F;108.0.0.0 是Chrome 108版本<br>Safari&#x2F;537.36 是在用户代理字符串中的数字为537.36</p>
-</blockquote>
-<br>
-
-<p>参考:<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45656077/article/details/113619553">AppleWebKit&#x2F;537.36(KHTML,likeGecko)与cdn讲解</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c5cf6a1967d1">HTTP请求头之User-Agent</a></p>
+</li>
+<li><p>强类型（&#x3D;&#x3D;&#x3D;）</p>
+<p>会先判断两个比较元素类型是否相同，再比较</p>
+<pre class="line-numbers language-php" data-language="php"><code class="language-php">例子：
+<span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'123'</span><span class="token operator">===</span><span class="token number">123</span><span class="token punctuation">)</span> <span class="token comment">//false</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token number">123</span> <span class="token operator">===</span> <span class="token number">123</span><span class="token punctuation">)</span> <span class="token comment">//true   </span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token operator">===</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">//false    </span>
+<span class="token delimiter important">?></span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
 
                 
             </div>
@@ -520,7 +520,7 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2023/05/27/%E7%94%A8%E6%88%B7%E4%BB%A3%E7%90%86/">
+                <a href="/2023/05/27/PHP/">
                     <div class="card-image">
                         
                         
@@ -717,6 +717,60 @@
 
     <footer class="page-footer bg-color">
     
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="7221672160"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
@@ -730,7 +784,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">625</span>&nbsp;字
+                class="white-color">230</span>&nbsp;字
             
             
             

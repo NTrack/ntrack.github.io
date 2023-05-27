@@ -421,7 +421,7 @@
             <article class="cd-timeline-content" data-aos="fade-up">
                 <div class="article col s12 m6">
                     <div class="card">
-                        <a href="/2023/05/27/%E7%94%A8%E6%88%B7%E4%BB%A3%E7%90%86/">
+                        <a href="/2023/05/27/PHP/">
                             <div class="card-image">
                                 
                                 
@@ -433,10 +433,12 @@
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    用户代理（User Agent，简称 UA）意义:一个特殊字符串头，使得服务器能够识别客户使用的 操作系统 及版本、CPU 类型、 浏览器 及版本、浏览器渲染引擎、浏览器语言、 浏览器插件 等 在线本机识别 UA
-
-
-PC端UA信息解读:例
+                                    考点：1.PHP比较类型
+弱类型（&#x3D;&#x3D;)
+会先把字符串类型转化成相同，再进行比较。该字符串的开始部分决定了它的值，如果该字符串以合法的数值开始，则使用该数值，否则其值为0
+例子：
+&lt;?php
+var_dump("1
                                 
                             </div>
                             <div class="publish-info">
@@ -516,6 +518,60 @@ PC端UA信息解读:例
 
     <footer class="page-footer bg-color">
     
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="7221672160"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
@@ -529,7 +585,7 @@ PC端UA信息解读:例
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">625</span>&nbsp;字
+                class="white-color">230</span>&nbsp;字
             
             
             
