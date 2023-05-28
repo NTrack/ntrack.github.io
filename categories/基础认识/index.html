@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, Ntrack">
+    <meta name="keywords" content="分类: 基础认识, Ntrack">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | Ntrack</title>
+    <title>分类: 基础认识 | Ntrack</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,100 +308,261 @@
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Web/" title="Web: 2">
+                
+                <a href="/categories/%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/" title="基础认识: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #F9EBEA;">基础认识
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E9%A2%98%E7%9B%AE%E9%9B%86/" title="题目集: 4">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Web" style="background-color: #F9EBEA;">Web
+                            style="background-color: #F5EEF8;">题目集
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E9%97%AE%E9%A2%98%E9%9B%86/" title="问题集: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">问题集
                         <span class="tag-length">2</span>
                     </span>
                 </a>
                 
-                
-                <a href="/tags/sqli-labs/" title="sqli_labs: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="sqli_labs" style="background-color: #F5EEF8;">sqli_labs
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Linux/" title="Linux: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Linux" style="background-color: #D5F5E3;">Linux
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/PHP/" title="PHP: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="PHP" style="background-color: #E8F8F5;">PHP
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/base64/" title="base64: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="base64" style="background-color: #FEF9E7;">base64
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/CTF/" title="CTF: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="CTF" style="background-color: #F8F9F9;">CTF
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
                 
             </div>
         </div>
     </div>
 </div>
 
-    
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"Web","weight":2,"link":"/tags/Web/"},{"text":"sqli_labs","weight":3,"link":"/tags/sqli-labs/"},{"text":"Linux","weight":1,"link":"/tags/Linux/"},{"text":"PHP","weight":1,"link":"/tags/PHP/"},{"text":"base64","weight":1,"link":"/tags/base64/"},{"text":"CTF","weight":1,"link":"/tags/CTF/"}], {
-        autoResize: true
-    });
-</script>
 
     
 
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/05/28/Referer/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="了解Referer">
+                            
+                            <span class="card-title">了解Referer</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                RefererHeaders中的referer
+
+显示意义:表示你是从哪个网页来到这个网页的，如果直接通过网址进行请求则没有referer
+
+
+
+盗链
+盗链是指服务提供商自己不提供服务的内容，通过技术手段（可以理解成爬虫）去获取其他网站的资
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/" class="post-category">
+                                    基础认识
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Web/">
+                            <span class="chip bg-color">Web</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/05/28/Cookie/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="了解Cookie">
+                            
+                            <span class="card-title">了解Cookie</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Cookie1.Cookie是什么
+Cookie是一段不超过4KB的小型文本数据
+
+
+
+2.Cookie的作用保存用户状态信息，当用户访问服务器的时候，服务器如果需要记录该用户就会颁发记录相关信息的Cookie给用户的浏览器，然后被浏览器保
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/" class="post-category">
+                                    基础认识
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Web/">
+                            <span class="chip bg-color">Web</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/05/28/PHP/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="PHP比较类型">
+                            
+                            <span class="card-title">PHP比较类型</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                考点：1.PHP比较类型
+弱类型（&#x3D;&#x3D;)
+会先把字符串类型转化成相同，再进行比较。该字符串的开始部分决定了它的值，如果该字符串以合法的数值开始，则使用该数值，否则其值为0
+例子：
+&lt;?php
+var_dump("1
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/" class="post-category">
+                                    基础认识
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/PHP/">
+                            <span class="chip bg-color">PHP</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/05/28/base64%E7%BC%96%E7%A0%81/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Base64编码">
+                            
+                            <span class="card-title">Base64编码</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Base64编码原来内容用UTF-8编码转化为底层二进制，根据编码规则和编码索引表转化成为base64内容。
+1.编码内容Base64编码可以打印64个不同字符，分别为字母 A-Z、a-z、数字 0-9，还有’+’和’&#x2F;‘。(特殊
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/" class="post-category">
+                                    基础认识
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/base64/">
+                            <span class="chip bg-color">base64</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">

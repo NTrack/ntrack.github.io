@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, Ntrack">
+    <meta name="keywords" content="分类: 题目集, Ntrack">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | Ntrack</title>
+    <title>分类: 题目集 | Ntrack</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,100 +308,279 @@
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Web/" title="Web: 2">
+                
+                <a href="/categories/%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/" title="基础认识: 4">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Web" style="background-color: #F9EBEA;">Web
+                            style="background-color: #F9EBEA;">基础认识
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E9%A2%98%E7%9B%AE%E9%9B%86/" title="题目集: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #F5EEF8;">题目集
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E9%97%AE%E9%A2%98%E9%9B%86/" title="问题集: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">问题集
                         <span class="tag-length">2</span>
                     </span>
                 </a>
                 
-                
-                <a href="/tags/sqli-labs/" title="sqli_labs: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="sqli_labs" style="background-color: #F5EEF8;">sqli_labs
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Linux/" title="Linux: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Linux" style="background-color: #D5F5E3;">Linux
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/PHP/" title="PHP: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="PHP" style="background-color: #E8F8F5;">PHP
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/base64/" title="base64: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="base64" style="background-color: #FEF9E7;">base64
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/CTF/" title="CTF: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="CTF" style="background-color: #F8F9F9;">CTF
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
                 
             </div>
         </div>
     </div>
 </div>
 
-    
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"Web","weight":2,"link":"/tags/Web/"},{"text":"sqli_labs","weight":3,"link":"/tags/sqli-labs/"},{"text":"Linux","weight":1,"link":"/tags/Linux/"},{"text":"PHP","weight":1,"link":"/tags/PHP/"},{"text":"base64","weight":1,"link":"/tags/base64/"},{"text":"CTF","weight":1,"link":"/tags/CTF/"}], {
-        autoResize: true
-    });
-</script>
 
     
 
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/05/28/Less23/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Less23">
+                            
+                            <span class="card-title">Less23</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Less231.过滤注释符的Get注入(单引号注入)Mysql注释符号
+
+
+
+注释类型
+符号
+
+
+
+单行注释
+**– -**内容和 **#**内容
+
+
+多行注释
+&#x2F;*内容*&#x2F;
+
+
+新注释符
+;%00内容
+
+
+2.审计代码
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%A2%98%E7%9B%AE%E9%9B%86/" class="post-category">
+                                    题目集
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/sqli-labs/">
+                            <span class="chip bg-color">sqli_labs</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/05/28/Less20/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Less20">
+                            
+                            <span class="card-title">Less20</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Less20Cookie注入,测试需要在登录前提下操作Cooike了解
+(1)对账号和密码进行注入，发现没有回显，认为账号密码存在着强过滤
+ 1’ OR 1 &#x3D; 1 –+1’) OR 1 &#x3D; 1 –+1’)) OR 1 
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%A2%98%E7%9B%AE%E9%9B%86/" class="post-category">
+                                    题目集
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/sqli-labs/">
+                            <span class="chip bg-color">sqli_labs</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/05/28/Less18/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Less18">
+                            
+                            <span class="card-title">Less18</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Less18头部注入:Uagent Filed-error based用户代理了解
+步骤1.(1)查看源码发现对账号和密码很难处理
+(2)审计代码，发现可以对用户代理进行操作，可插入’$uagent’, ‘$IP’, $uname.
+(3)
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%A2%98%E7%9B%AE%E9%9B%86/" class="post-category">
+                                    题目集
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/sqli-labs/">
+                            <span class="chip bg-color">sqli_labs</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/05/28/xctf-easyphp/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="XCTF题目——easyphp">
+                            
+                            <span class="card-title">XCTF题目——easyphp</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                easyphp
+类型：PHP代码审计1.审查传值$a = $_GET['a'];
+
+$b = $GET['b'];
+
+$c =(array)json_decode(@$GET['c']);
+
+
+
+2.观看分析条件从上往下看:
+1.if(is
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%A2%98%E7%9B%AE%E9%9B%86/" class="post-category">
+                                    题目集
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/CTF/">
+                            <span class="chip bg-color">CTF</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
