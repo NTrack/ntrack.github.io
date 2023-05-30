@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>了解robots协议</title>
+      <link href="/2023/05/30/robots%E5%8D%8F%E8%AE%AE/"/>
+      <url>/2023/05/30/robots%E5%8D%8F%E8%AE%AE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="robots协议"><a href="#robots协议" class="headerlink" title="robots协议"></a>robots协议</h1><blockquote><p>robots.txt是用于通知爬虫的，内容包含了不希望被爬的信息</p><p>如:</p><p>1.不要访问某个文件、文件夹</p><p>2.禁止某些爬虫的访问</p><p>3.限制爬虫访问网站的频率</p></blockquote><h1 id="如何查看robots-txt"><a href="#如何查看robots-txt" class="headerlink" title="如何查看robots.txt"></a>如何查看robots.txt</h1><blockquote><p>网址&#x2F;robots.txt</p><p>如:cn.bing.com&#x2F;robots.txt</p></blockquote><h1 id="参数"><a href="#参数" class="headerlink" title="参数:"></a>参数:</h1><blockquote><p>1.User-agent: 爬虫的名称</p><p>2.Disallow: 不允许爬虫访问的地址</p><p>3.Allow: 允许爬虫访问的地址</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>web入门</title>
       <link href="/2023/05/30/ctf.show/"/>
       <url>/2023/05/30/ctf.show/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="web1-3"><a href="#web1-3" class="headerlink" title="web1-3"></a>web1-3</h2><blockquote><p>web1：</p><p>1.直接查看源码即可</p></blockquote><blockquote><p>web2：</p><p>1.可以使用Ctrl+U查看源码</p><p>2.火狐浏览器的网址栏输入about:config，再输入javascript关闭它即可</p></blockquote><blockquote><p>web3：</p><p>1.发现源码没有信息，查看响应包，F2然后查看network</p></blockquote><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status">了解响应包</a></p><h2 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h2><p>用到了robots协议</p><blockquote><p>输入：网址&#x2F;robots.txt</p></blockquote><p>获取到信息，存在不想被爬的flagishere.txt文件</p><p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202305302304248.png"></p><blockquote><p>再输入：网址&#x2F;flagishere.txt</p><p>获取到flag</p></blockquote>]]></content>
       
       
       <categories>
