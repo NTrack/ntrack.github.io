@@ -387,8 +387,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/cad/">
+                                <span class="chip bg-color">cad</span>
                             </a>
                         
                     </div>
@@ -399,8 +399,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%97%AE%E9%A2%98%E9%9B%86/" class="post-category">
-                                问题集
+                            <a href="/categories/BBB/" class="post-category">
+                                BBB
                             </a>
                         
                     </div>
@@ -419,14 +419,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-05-28
+                    2023-05-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    178
+                    176
                 </div>
                 
 
@@ -451,14 +451,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Linux开机自启动方式"><a href="#Linux开机自启动方式" class="headerlink" title="Linux开机自启动方式"></a>Linux开机自启动方式</h1><h2 id="1-使用systemd服务"><a href="#1-使用systemd服务" class="headerlink" title="1.使用systemd服务"></a>1.使用systemd服务</h2><p>​	 （1）在&#x2F;etc&#x2F;systemd&#x2F;system&#x2F;目录下创建’命名.service’<br>​	 （2）命名.service的内容：</p>
-<blockquote>
-<p>[Unit]</p>
-<p>​		Description&#x3D;描述名</p>
-<p>[Service]</p>
-<p>​		ExecStart&#x3D;配置文件路径</p>
-<p>[Install]<br>    WantedBy&#x3D;依赖目标(在依赖目标启动时候启动）</p>
-</blockquote>
+                <h1 id="Linux开机自启动方式"><a href="#Linux开机自启动方式" class="headerlink" title="Linux开机自启动方式"></a>Linux开机自启动方式</h1><h2 id="1-使用systemd服务"><a href="#1-使用systemd服务" class="headerlink" title="1.使用systemd服务"></a>1.使用systemd服务</h2><p>​	 （1）在&#x2F;etc&#x2F;systemd&#x2F;system&#x2F;目录下创建’命名.service’<br>​	 （2）命名.service的内容：<br>​		[Unit]<br>​		Description&#x3D;描述名</p>
+<pre><code>    [Service]
+    ExecStart=配置文件路径
+
+    [Install]
+    WantedBy=依赖目标(在依赖目标启动时候启动）
+</code></pre>
 <h2 id="2-使用cron作业"><a href="#2-使用cron作业" class="headerlink" title="2.使用cron作业"></a>2.使用cron作业</h2><p>​	 （1）使用shell命令：crontab -e<br>​	 （2）选择编辑器进入编辑后:@reboot 需要启动的路径		&#x2F;&#x2F;@reboot是特殊的时间参数，表示系统启动执行</p>
 <h2 id="3-用户级别启动"><a href="#3-用户级别启动" class="headerlink" title="3.用户级别启动"></a>3.用户级别启动</h2><p>​	 （1）在用户的主目录下编辑’~&#x2F;.bashrc’<br>​	 （2）在文件末尾添加需要启动的路径后保存退出<br>​	 （3）重启终端更新配置</p>
 <h2 id="4-使用init-d-脚本"><a href="#4-使用init-d-脚本" class="headerlink" title="4.使用init.d 脚本"></a>4.使用init.d 脚本</h2>
@@ -475,8 +474,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/cad/">
+                                    <span class="chip bg-color">cad</span>
                                 </a>
                             
                         </div>
@@ -585,8 +584,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%97%AE%E9%A2%98%E9%9B%86/" class="post-category">
-                                    问题集
+                            <a href="/categories/BBB/" class="post-category">
+                                    BBB
                                 </a>
                             
                             
@@ -597,8 +596,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/cad/">
+                        <span class="chip bg-color">cad</span>
                     </a>
                     
                 </div>
@@ -801,7 +800,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.4k</span>&nbsp;字
+                class="white-color">3.3k</span>&nbsp;字
             
             
             

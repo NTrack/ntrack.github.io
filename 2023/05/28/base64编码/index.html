@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Base64编码, Ntrack">
+    <meta name="keywords" content="Ntrack">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Base64编码 | Ntrack</title>
+    <title>Ntrack</title>
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/awesome/css/all.css">
@@ -266,12 +266,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Base64编码</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -385,25 +385,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/base64/">
-                                <span class="chip bg-color">base64</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/" class="post-category">
-                                基础认识
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -419,14 +406,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-05-28
+                    2023-01-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    488
+                    484
                 </div>
                 
 
@@ -452,8 +439,8 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Base64编码"><a href="#Base64编码" class="headerlink" title="Base64编码"></a>Base64编码</h1><p>原来内容用UTF-8编码转化为底层二进制，根据编码规则和编码索引表转化成为base64内容。</p>
-<h2 id="1-编码内容"><a href="#1-编码内容" class="headerlink" title="1.编码内容"></a>1.编码内容</h2><p>Base64编码可以打印64个不同字符，分别为字母 A-Z、a-z、数字 0-9，还有’+’和’&#x2F;‘。(特殊的情况还有一个’&#x3D;’)</p>
-<h2 id="2-编码索引"><a href="#2-编码索引" class="headerlink" title="2.编码索引:"></a>2.编码索引:</h2><table>
+<h2 id="编码内容"><a href="#编码内容" class="headerlink" title="编码内容"></a>编码内容</h2><p>Base64编码可以打印64个不同字符，分别为字母 A-Z、a-z、数字 0-9，还有’+’和’&#x2F;‘。(特殊的情况还有一个’&#x3D;’)</p>
+<h2 id="编码索引"><a href="#编码索引" class="headerlink" title="编码索引:"></a>编码索引:</h2><table>
 <thead>
 <tr>
 <th>码值</th>
@@ -627,7 +614,7 @@
 <td>&#x2F;</td>
 </tr>
 </tbody></table>
-<h2 id="3-编码规则"><a href="#3-编码规则" class="headerlink" title="3.编码规则"></a>3.编码规则</h2><p>1.把每<strong>三个 8Bit 字节</strong>转换为<strong>四个 6Bit 字节</strong></p>
+<h2 id="编码规则"><a href="#编码规则" class="headerlink" title="编码规则"></a>编码规则</h2><p>1.把每<strong>三个 8Bit 字节</strong>转换为<strong>四个 6Bit 字节</strong></p>
 <blockquote>
 <p>例子:abc<br>二进制转化(3个8bit):<br>01100001&amp;ensp;&amp;ensp; 01100010&amp;ensp;&amp;ensp;01100011<br><br>二进制转化(4个6bit)<br>011000&amp;ensp;&amp;ensp;010110&amp;ensp;&amp;ensp; 000101&amp;ensp;&amp;ensp; 100011<br><br>abc根据base64编码索引表转化为:YWJj</p>
 </blockquote>
@@ -635,7 +622,7 @@
 <blockquote>
 <p>例子1:a<br>二进制转化(只有1个8bit):<br>01100001<br>二进制转化为(只有2个6bit):<br><strong>00</strong>0110 &amp;ensp;&amp;ensp;<strong>00</strong>0001&amp;ensp;&amp;ensp; 空&amp;ensp;&amp;ensp; 空<br>a根据base64编码索引表转化为:YQ&#x3D;&#x3D;<br><br>例子2:ab<br>二进制转化(只有2个8bit):<br>01100001&amp;ensp;&amp;ensp; 01100010<br>二进制转化为(只有3个6bit):<br>011000&amp;ensp;&amp;ensp;010110&amp;ensp;&amp;ensp;0010<strong>00</strong>&amp;ensp;&amp;ensp;空<br>ab根据base64编码索引表转化为:YWI&#x3D;</p>
 </blockquote>
-<h2 id="4-使用场景"><a href="#4-使用场景" class="headerlink" title="4.使用场景"></a>4.使用场景</h2><p>1.证书<br>2.XML镶嵌进另一个XML文件<br>3.网页的小图片镶入<br>4.较老的纯文本协议 SMTP</p>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>1.证书<br>2.XML镶嵌进另一个XML文件<br>3.网页的小图片镶入<br>4.较老的纯文本协议 SMTP</p>
 
                 
             </div>
@@ -649,11 +636,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/base64/">
-                                    <span class="chip bg-color">base64</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -975,7 +958,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.4k</span>&nbsp;字
+                class="white-color">3.3k</span>&nbsp;字
             
             
             
