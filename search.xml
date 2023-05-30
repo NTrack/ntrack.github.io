@@ -4,26 +4,75 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2023/05/28/Referer/"/>
-      <url>/2023/05/28/Referer/</url>
+      <title>web入门</title>
+      <link href="/2023/05/30/ctf.show/"/>
+      <url>/2023/05/30/ctf.show/</url>
       
-        <content type="html"><![CDATA[<h1 id="Referer"><a href="#Referer" class="headerlink" title="Referer"></a>Referer</h1><p>Headers中的referer</p><blockquote><p>显示意义:表示你是从哪个网页来到这个网页的，如果直接通过网址进行请求则没有referer</p></blockquote><br><h2 id="盗链"><a href="#盗链" class="headerlink" title="盗链"></a>盗链</h2><blockquote><p>盗链是指服务提供商自己不提供服务的内容，通过技术手段（可以理解成爬虫）去获取其他网站的资源展示在自己的网站上。</p></blockquote><p><strong>种类</strong></p><blockquote><p>图片盗链、音频盗链、视频盗链、文件盗链</p></blockquote><p><strong>危害</strong></p><blockquote><p>会占据被盗链网站的带宽，而且被盗链网站真实被点击率极低，严重危害被盗链网站的利益</p></blockquote><p><strong>判断</strong></p><blockquote><p>正常的访问网站内容都会在本网站内一步一步点下去的，如果出现referer不是本网站，是其他网站的，则该referer是一个爬虫.</p></blockquote><p><strong>备注</strong></p><blockquote><p>可以通过设置referer进行防盗链，也可以进行绕过防盗链</p></blockquote><p><a href="https://www.sojson.com/blog/58.html">参考资料</a></p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> 题目集 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ctf_show </tag>
+            
+        </tags>
       
     </entry>
     
     
     
     <entry>
-      <title></title>
+      <title>了解Referer</title>
+      <link href="/2023/05/28/Referer/"/>
+      <url>/2023/05/28/Referer/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Referer"><a href="#Referer" class="headerlink" title="Referer"></a>Referer</h1><p>Headers中的referer</p><blockquote><p>显示意义:表示你是从哪个网页来到这个网页的，如果直接通过网址进行请求则没有referer</p></blockquote><br><h2 id="盗链"><a href="#盗链" class="headerlink" title="盗链"></a>盗链</h2><blockquote><p>盗链是指服务提供商自己不提供服务的内容，通过技术手段（可以理解成爬虫）去获取其他网站的资源展示在自己的网站上。</p></blockquote><p><strong>种类</strong></p><blockquote><p>图片盗链、音频盗链、视频盗链、文件盗链</p></blockquote><p><strong>危害</strong></p><blockquote><p>会占据被盗链网站的带宽，而且被盗链网站真实被点击率极低，严重危害被盗链网站的利益</p></blockquote><p><strong>判断</strong></p><blockquote><p>正常的访问网站内容都会在本网站内一步一步点下去的，如果出现referer不是本网站，是其他网站的，则该referer是一个爬虫.</p></blockquote><p><strong>备注</strong></p><blockquote><p>可以通过设置referer进行防盗链，也可以进行绕过防盗链</p></blockquote><p><a href="https://www.sojson.com/blog/58.html">参考资料</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>了解Cookie</title>
       <link href="/2023/05/28/Cookie/"/>
       <url>/2023/05/28/Cookie/</url>
       
         <content type="html"><![CDATA[<h1 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h1><h3 id="Cookie是什么"><a href="#Cookie是什么" class="headerlink" title="Cookie是什么"></a>Cookie是什么</h3><blockquote><p>Cookie是一段不超过4KB的小型<strong>文本</strong>数据</p></blockquote><br><h3 id="Cookie的作用"><a href="#Cookie的作用" class="headerlink" title="Cookie的作用"></a>Cookie的作用</h3><p><strong>保存用户状态信息</strong>，当用户访问服务器的时候，服务器如果需要记录该用户就会颁发<strong>记录相关信息的Cookie</strong>给用户的浏览器，然后被浏览器保存。当再次访问该服务器的时候，浏览器会直接发送请求链接和该Cookie到服务器中。服务器会甄别该Cookie，进行操作。</p><blockquote><p>如第一次登录网站需要账号密码，当一定时间内再次登录就无需再次输入账号密码，而是直接呈现登录状态</p></blockquote><br><h3 id="Cookie机制"><a href="#Cookie机制" class="headerlink" title="Cookie机制"></a>Cookie机制</h3><p>客户端发送一个请求到服务器 ——&gt; 服务器发送一个HttpResponse响应到客户端，其中包含Set-Cookie的头部 ——&gt; 客户端保存cookie，之后向服务器发送请求时，HttpRequest请求中会包含一个Cookie的头部 ——&gt; 服务器返回响应数据</p><br><h3 id="Cookie的生命周期"><a href="#Cookie的生命周期" class="headerlink" title="Cookie的生命周期"></a>Cookie的生命周期</h3><p>cookie有2种存储方式</p><ul><li><pre><code>    一种是会话性      会话性：如果cookie为会话性，那么cookie仅会保存在客户端的内存中，当我们关闭客服端时cookie也就失效了</code></pre></li><li><pre><code>    一种是持久性。</code></pre></li></ul><p>持久性：如果cookie为持久性，那么cookie会保存在用户的硬盘中，直至生存期结束或者用户主动将其销毁。</p><br><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><strong>Cookie就是一些数据</strong>，用于存储服务器返回给客服端的信息，客户端进行保存。在下一次访问该网站时，客户端会将保存的cookie一同发给服务器，服务器再利用cookie进行一些操作。利用cookie我们就可以实现自动登录，保存游览历史，身份验证等功能。</p><p>引用:<br><a href="https://blog.csdn.net/m0_51545690/article/details/123359959">一篇文章彻底搞懂cookie</a><br><a href="https://www.jianshu.com/p/6fc9cea6daa2/">深入理解Cookie</a></p>]]></content>
       
       
+      <categories>
+          
+          <category> 基础认识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Web </tag>
+            
+        </tags>
       
     </entry>
     
@@ -71,7 +120,7 @@
       
         <tags>
             
-            <tag> CTF </tag>
+            <tag> xctf </tag>
             
         </tags>
       
@@ -80,13 +129,25 @@
     
     
     <entry>
-      <title></title>
+      <title>了解Base64编码</title>
       <link href="/2023/05/28/base64%E7%BC%96%E7%A0%81/"/>
       <url>/2023/05/28/base64%E7%BC%96%E7%A0%81/</url>
       
         <content type="html"><![CDATA[<h1 id="Base64编码"><a href="#Base64编码" class="headerlink" title="Base64编码"></a>Base64编码</h1><p>原来内容用UTF-8编码转化为底层二进制，根据编码规则和编码索引表转化成为base64内容。</p><h2 id="编码内容"><a href="#编码内容" class="headerlink" title="编码内容"></a>编码内容</h2><p>Base64编码可以打印64个不同字符，分别为字母 A-Z、a-z、数字 0-9，还有’+’和’&#x2F;‘。(特殊的情况还有一个’&#x3D;’)</p><h2 id="编码索引"><a href="#编码索引" class="headerlink" title="编码索引:"></a>编码索引:</h2><table><thead><tr><th>码值</th><th>字符</th><th>码值</th><th>字符</th><th>码值</th><th>字符</th><th>码值</th><th>字符</th></tr></thead><tbody><tr><td>0</td><td>A</td><td>16</td><td>Q</td><td>32</td><td>g</td><td>48</td><td>w</td></tr><tr><td>1</td><td>B</td><td>17</td><td>R</td><td>33</td><td>h</td><td>49</td><td>x</td></tr><tr><td>2</td><td>C</td><td>18</td><td>S</td><td>34</td><td>i</td><td>50</td><td>y</td></tr><tr><td>3</td><td>D</td><td>19</td><td>T</td><td>35</td><td>j</td><td>51</td><td>z</td></tr><tr><td>4</td><td>E</td><td>20</td><td>U</td><td>36</td><td>k</td><td>52</td><td>0</td></tr><tr><td>5</td><td>F</td><td>21</td><td>V</td><td>37</td><td>l</td><td>53</td><td>1</td></tr><tr><td>6</td><td>G</td><td>22</td><td>W</td><td>38</td><td>m</td><td>54</td><td>2</td></tr><tr><td>7</td><td>H</td><td>23</td><td>X</td><td>39</td><td>n</td><td>55</td><td>3</td></tr><tr><td>8</td><td>I</td><td>24</td><td>Y</td><td>40</td><td>o</td><td>56</td><td>4</td></tr><tr><td>9</td><td>J</td><td>25</td><td>Z</td><td>41</td><td>p</td><td>57</td><td>5</td></tr><tr><td>10</td><td>K</td><td>26</td><td>a</td><td>42</td><td>q</td><td>58</td><td>6</td></tr><tr><td>11</td><td>L</td><td>27</td><td>b</td><td>43</td><td>r</td><td>59</td><td>7</td></tr><tr><td>12</td><td>M</td><td>28</td><td>c</td><td>44</td><td>s</td><td>60</td><td>8</td></tr><tr><td>13</td><td>N</td><td>29</td><td>d</td><td>45</td><td>t</td><td>61</td><td>9</td></tr><tr><td>14</td><td>O</td><td>30</td><td>e</td><td>46</td><td>u</td><td>62</td><td>+</td></tr><tr><td>15</td><td>P</td><td>31</td><td>f</td><td>47</td><td>v</td><td>63</td><td>&#x2F;</td></tr></tbody></table><h2 id="编码规则"><a href="#编码规则" class="headerlink" title="编码规则"></a>编码规则</h2><p>1.把每<strong>三个 8Bit 字节</strong>转换为<strong>四个 6Bit 字节</strong></p><blockquote><p>例子:abc<br>二进制转化(3个8bit):<br>01100001&amp;ensp;&amp;ensp; 01100010&amp;ensp;&amp;ensp;01100011<br><br>二进制转化(4个6bit)<br>011000&amp;ensp;&amp;ensp;010110&amp;ensp;&amp;ensp; 000101&amp;ensp;&amp;ensp; 100011<br><br>abc根据base64编码索引表转化为:YWJj</p></blockquote><p>2.<strong>不够3个字符的需要补00(单字符高位补00，两字符低位补00)<strong>，存在</strong>空位</strong>用’<strong>&#x3D;</strong>‘来补充</p><blockquote><p>例子1:a<br>二进制转化(只有1个8bit):<br>01100001<br>二进制转化为(只有2个6bit):<br><strong>00</strong>0110 &amp;ensp;&amp;ensp;<strong>00</strong>0001&amp;ensp;&amp;ensp; 空&amp;ensp;&amp;ensp; 空<br>a根据base64编码索引表转化为:YQ&#x3D;&#x3D;<br><br>例子2:ab<br>二进制转化(只有2个8bit):<br>01100001&amp;ensp;&amp;ensp; 01100010<br>二进制转化为(只有3个6bit):<br>011000&amp;ensp;&amp;ensp;010110&amp;ensp;&amp;ensp;0010<strong>00</strong>&amp;ensp;&amp;ensp;空<br>ab根据base64编码索引表转化为:YWI&#x3D;</p></blockquote><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>1.证书<br>2.XML镶嵌进另一个XML文件<br>3.网页的小图片镶入<br>4.较老的纯文本协议 SMTP</p>]]></content>
       
       
+      <categories>
+          
+          <category> 基础认识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编码 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -121,16 +182,10 @@
       
       <categories>
           
-          <category> BBB </category>
+          <category> Linux </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> cad </tag>
-            
-        </tags>
       
     </entry>
     
