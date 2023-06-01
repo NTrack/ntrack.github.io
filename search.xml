@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>源码泄露</title>
+      <link href="/2023/06/01/%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2/"/>
+      <url>/2023/06/01/%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2/</url>
+      
+        <content type="html"><![CDATA[<p>类型:</p><p>:</p><p>常见类型:</p><blockquote><p>.git源码泄露</p><p>.svn源码泄露</p><p>.hg 源码泄露</p></blockquote><h2 id="git源码泄露"><a href="#git源码泄露" class="headerlink" title=".git源码泄露"></a>.git源码泄露</h2><p>Git源码泄露是指将敏感或保密的代码、文件或数据意外地或非授权地公开到公共的Git存储库中。初始化目录git init会生成.git文件,如果因此发布到服务器上可能被利用复原源码.</p><blockquote><p>简单检查: 网址&#x2F;.git</p></blockquote><blockquote><p>目录了解:</p><ul><li>hooks：存放一些sheel的地方。</li><li>info：存放仓库的信息</li><li>object：存放所有git对象的地方</li><li>refs：存放提交hash的地方</li><li>config：github的配置信息</li><li>description：仓库的描述信息，主要给gitweb等git托管系统使用</li><li>HEAD：映射到ref引用，能够找到下一次commit的前一次哈希值</li></ul></blockquote><blockquote><p>修复建议：删除.git目录或者修改中间件配置进行对.git隐藏文件夹的访问。</p></blockquote><p><a href="https://www.freebuf.com/articles/web/267597.html">git泄露原理了解</a></p><h2 id="svn源码泄露"><a href="#svn源码泄露" class="headerlink" title=".svn源码泄露"></a>.svn源码泄露</h2><p>SVN是一种版本控制系统，用于管理和跟踪项目中的源代码和文件。</p><blockquote><p>出现原因: 网站管理员在发布代码时，没有使用‘导出’功能，而是直接复制代码文件夹到WEB服务器上，这就使.svn隐藏文件夹被暴露于外网环境，可以利用.svn&#x2F;entries文件，获取到服务器源码。</p></blockquote><blockquote><p>修复建议:删除web目录中所有.svn隐藏文件夹，开发人员在使用SVN时，严格使用导出功能，禁止直接复制代码</p></blockquote><h2 id="hg-源码泄露"><a href="#hg-源码泄露" class="headerlink" title=".hg 源码泄露"></a>.hg 源码泄露</h2><p>Mercurial是一种分布式版本控制系统，用于管理和跟踪项目中的源代码和文件</p><blockquote><p>使用 <code>hg init</code>的时候会生成.hg</p></blockquote><p><a href="https://cn-sec.com/archives/1245013.html">常见源码泄露</a></p><p><a href="https://lddp.github.io/2018/05/10/WEB-%E6%BA%90%E7%A0%81%E6%B3%84%E6%BC%8F/">WEB安全-常见源码泄露</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础认识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>文件泄露</title>
+      <link href="/2023/06/01/%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2/"/>
+      <url>/2023/06/01/%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="PHP文件泄露"><a href="#PHP文件泄露" class="headerlink" title="PHP文件泄露"></a>PHP文件泄露</h2><p><strong>phps即为 PHP Source</strong>(.phps后缀)</p><blockquote><p>phps文件就是php的源码文件,用于给用户查看php代码.服务器不会执行他们,并将他们以文本文件发送给浏览器,在PHP5.4.0版本后将.phps文件从默认PHP配置中移除</p></blockquote><p>一般出现的场景: 源代码共享、教学或演示目的</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础认识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>了解robots协议</title>
       <link href="/2023/05/30/robots%E5%8D%8F%E8%AE%AE/"/>
       <url>/2023/05/30/robots%E5%8D%8F%E8%AE%AE/</url>
@@ -13,14 +63,14 @@
       
       <categories>
           
-          <category> 基础知识 </category>
+          <category> 基础认识 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> web </tag>
+            <tag> Web </tag>
             
         </tags>
       
@@ -33,7 +83,7 @@
       <link href="/2023/05/30/ctf.show/"/>
       <url>/2023/05/30/ctf.show/</url>
       
-        <content type="html"><![CDATA[<h2 id="web1-3"><a href="#web1-3" class="headerlink" title="web1-3"></a>web1-3</h2><blockquote><p>web1：</p><p>1.直接查看源码即可</p></blockquote><blockquote><p>web2：</p><p>1.可以使用Ctrl+U查看源码</p><p>2.火狐浏览器的网址栏输入about:config，再输入javascript关闭它即可</p></blockquote><blockquote><p>web3：</p><p>1.发现源码没有信息，查看响应包，F2然后查看network</p></blockquote><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status">了解响应包</a></p><h2 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h2><p>用到了robots协议</p><p><a href="https://ntrack.github.io/2023/05/30/robots%E5%8D%8F%E8%AE%AE/">简单了解robots协议</a></p><blockquote><p>输入：网址&#x2F;robots.txt</p></blockquote><p>获取到信息，存在不想被爬的flagishere.txt文件</p><p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202305302304248.png"></p><blockquote><p>再输入：网址&#x2F;flagishere.txt</p><p>获取到flag</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="web1-3"><a href="#web1-3" class="headerlink" title="web1-3"></a>web1-3</h2><blockquote><p>web1：</p><p>1.直接查看源码即可</p></blockquote><blockquote><p>web2：</p><p>1.可以使用Ctrl+U查看源码</p><p>2.火狐浏览器的网址栏输入about:config，再输入javascript关闭它即可</p></blockquote><blockquote><p>web3：</p><p>1.发现源码没有信息，查看响应包，F2然后查看network</p></blockquote><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status">了解响应包</a></p><h2 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h2><p>考点：robots协议</p><p><a href="https://ntrack.github.io/2023/05/30/robots%E5%8D%8F%E8%AE%AE/">简单了解robots协议</a></p><blockquote><p>输入：网址&#x2F;robots.txt</p></blockquote><p>获取到信息，存在不想被爬的flagishere.txt文件</p><p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202305302304248.png"></p><blockquote><p>再输入：网址&#x2F;flagishere.txt</p><p>获取到flag</p></blockquote><h2 id="web5"><a href="#web5" class="headerlink" title="web5"></a>web5</h2><p>考点：phps文件泄露</p>]]></content>
       
       
       <categories>
@@ -63,7 +113,7 @@
       
       <categories>
           
-          <category> 基础知识 </category>
+          <category> 基础认识 </category>
           
       </categories>
       

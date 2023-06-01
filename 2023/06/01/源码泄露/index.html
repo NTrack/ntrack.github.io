@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="PHP比较类型, Ntrack">
+    <meta name="keywords" content="源码泄露, Ntrack">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>PHP比较类型 | Ntrack</title>
+    <title>源码泄露 | Ntrack</title>
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/awesome/css/all.css">
@@ -266,12 +266,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">PHP比较类型</h1>
+                    <h1 class="description center-align post-title">源码泄露</h1>
                 </div>
             </div>
         </div>
@@ -387,8 +387,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/PHP/">
-                                <span class="chip bg-color">PHP</span>
+                            <a href="/tags/CTF/">
+                                <span class="chip bg-color">CTF</span>
                             </a>
                         
                     </div>
@@ -412,21 +412,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-05-28
+                    2023-06-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-05-30
+                    2023-06-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    157
+                    441
                 </div>
                 
 
@@ -451,31 +451,47 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="考点："><a href="#考点：" class="headerlink" title="考点："></a>考点：</h1><h2 id="1-PHP比较类型"><a href="#1-PHP比较类型" class="headerlink" title="1.PHP比较类型"></a>1.PHP比较类型</h2><ol>
-<li><p>弱类型（&#x3D;&#x3D;)</p>
-<p>会先把字符串类型转化成相同，再进行比较。<strong>该字符串的开始部分决定了它的值，如果该字符串以合法的数值开始，则使用该数值，否则其值为0</strong></p>
-<pre class="line-numbers language-php" data-language="php"><code class="language-php">例子：
-<span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"123"</span><span class="token operator">==</span><span class="token number">123</span><span class="token punctuation">)</span>  <span class="token comment">//true</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"12admin"</span><span class="token operator">==</span><span class="token number">12</span><span class="token punctuation">)</span> <span class="token comment">//true</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"admin12"</span><span class="token operator">==</span><span class="token number">12</span><span class="token punctuation">)</span>  <span class="token comment">//false</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"admin12"</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment">//true</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"1e1"</span><span class="token operator">==</span><span class="token number">1e1</span><span class="token punctuation">)</span>  <span class="token comment">//true</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"0e1"</span><span class="token operator">==</span><span class="token number">0e102301</span><span class="token punctuation">)</span>  <span class="token comment">//true	e是科学计数法，0乘以任何数都等于0</span>
-<span class="token delimiter important">?></span></span> 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-</li>
-<li><p>强类型（&#x3D;&#x3D;&#x3D;）</p>
-<p>会先判断两个比较元素类型是否相同，再比较</p>
-<pre class="line-numbers language-php" data-language="php"><code class="language-php">例子：
-<span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'123'</span><span class="token operator">===</span><span class="token number">123</span><span class="token punctuation">)</span> <span class="token comment">//false</span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token number">123</span> <span class="token operator">===</span> <span class="token number">123</span><span class="token punctuation">)</span> <span class="token comment">//true   </span>
-<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token operator">===</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">//false    </span>
-<span class="token delimiter important">?></span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-</ol>
+                <p>类型:</p>
+<p>:</p>
+<p>常见类型:</p>
+<blockquote>
+<p>.git源码泄露</p>
+<p>.svn源码泄露</p>
+<p>.hg 源码泄露</p>
+</blockquote>
+<h2 id="git源码泄露"><a href="#git源码泄露" class="headerlink" title=".git源码泄露"></a>.git源码泄露</h2><p>Git源码泄露是指将敏感或保密的代码、文件或数据意外地或非授权地公开到公共的Git存储库中。初始化目录git init会生成.git文件,如果因此发布到服务器上可能被利用复原源码.</p>
+<blockquote>
+<p>简单检查: 网址&#x2F;.git</p>
+</blockquote>
+<blockquote>
+<p>目录了解:</p>
+<ul>
+<li>hooks：存放一些sheel的地方。</li>
+<li>info：存放仓库的信息</li>
+<li>object：存放所有git对象的地方</li>
+<li>refs：存放提交hash的地方</li>
+<li>config：github的配置信息</li>
+<li>description：仓库的描述信息，主要给gitweb等git托管系统使用</li>
+<li>HEAD：映射到ref引用，能够找到下一次commit的前一次哈希值</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>修复建议：删除.git目录或者修改中间件配置进行对.git隐藏文件夹的访问。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/267597.html">git泄露原理了解</a></p>
+<h2 id="svn源码泄露"><a href="#svn源码泄露" class="headerlink" title=".svn源码泄露"></a>.svn源码泄露</h2><p>SVN是一种版本控制系统，用于管理和跟踪项目中的源代码和文件。</p>
+<blockquote>
+<p>出现原因: 网站管理员在发布代码时，没有使用‘导出’功能，而是直接复制代码文件夹到WEB服务器上，这就使.svn隐藏文件夹被暴露于外网环境，可以利用.svn&#x2F;entries文件，获取到服务器源码。</p>
+</blockquote>
+<blockquote>
+<p>修复建议:删除web目录中所有.svn隐藏文件夹，开发人员在使用SVN时，严格使用导出功能，禁止直接复制代码</p>
+</blockquote>
+<h2 id="hg-源码泄露"><a href="#hg-源码泄露" class="headerlink" title=".hg 源码泄露"></a>.hg 源码泄露</h2><p>Mercurial是一种分布式版本控制系统，用于管理和跟踪项目中的源代码和文件</p>
+<blockquote>
+<p>使用 <code>hg init</code>的时候会生成.hg</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://cn-sec.com/archives/1245013.html">常见源码泄露</a></p>
+<p><a target="_blank" rel="noopener" href="https://lddp.github.io/2018/05/10/WEB-%E6%BA%90%E7%A0%81%E6%B3%84%E6%BC%8F/">WEB安全-常见源码泄露</a></p>
 
                 
             </div>
@@ -490,8 +506,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/PHP/">
-                                    <span class="chip bg-color">PHP</span>
+                                <a href="/tags/CTF/">
+                                    <span class="chip bg-color">CTF</span>
                                 </a>
                             
                         </div>
@@ -532,17 +548,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/05/28/Cookie/">
+                <a href="/2023/06/01/%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/15.jpg" class="responsive-img" alt="了解Cookie">
+                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/7.jpg" class="responsive-img" alt="源码泄露">
                         
-                        <span class="card-title">了解Cookie</span>
+                        <span class="card-title">源码泄露</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -552,9 +569,59 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/" class="post-category">
+                                    基础认识
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CTF/">
+                        <span class="chip bg-color">CTF</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/06/01/%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/21.jpg" class="responsive-img" alt="文件泄露">
+                        
+                        <span class="card-title">文件泄露</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -570,57 +637,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Web/">
-                        <span class="chip bg-color">Web</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/05/28/xctf-easyphp/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/11.jpg" class="responsive-img" alt="XCTF题目——easyphp">
-                        
-                        <span class="card-title">XCTF题目——easyphp</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%A2%98%E7%9B%AE%E9%9B%86/" class="post-category">
-                                    题目集
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/xctf/">
-                        <span class="chip bg-color">xctf</span>
+                    <a href="/tags/CTF/">
+                        <span class="chip bg-color">CTF</span>
                     </a>
                     
                 </div>
