@@ -426,7 +426,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    128
+                    374
                 </div>
                 
 
@@ -476,7 +476,29 @@
 <p>再输入：网址&#x2F;flagishere.txt</p>
 <p>获取到flag</p>
 </blockquote>
-<h2 id="web5"><a href="#web5" class="headerlink" title="web5"></a>web5</h2><p>考点：phps文件泄露</p>
+<h2 id="web5-6"><a href="#web5-6" class="headerlink" title="web5-6"></a>web5-6</h2><p>考点：phps文件泄露、www源码泄露</p>
+<p>积累个字典，使用dirb去爆破目录</p>
+<blockquote>
+<p>dirb 网址 自定义字典</p>
+</blockquote>
+<h2 id="web7-9"><a href="#web7-9" class="headerlink" title="web7-9"></a>web7-9</h2><p>考点:git源码泄露、svn源码泄露</p>
+<blockquote>
+<p>查看是否存在.git、.svn文件后缀:	网址&#x2F;.git	网址&#x2F;.svn</p>
+</blockquote>
+<h2 id="web10"><a href="#web10" class="headerlink" title="web10"></a>web10</h2><p>考点:vim缓存信息泄露</p>
+<blockquote>
+<p>再积累个字典信息，使用dirb进行爆破</p>
+</blockquote>
+<h2 id="web11"><a href="#web11" class="headerlink" title="web11"></a>web11</h2><p>考点:cookie传递信息</p>
+<blockquote>
+<p>通过网页调试的network进行查看cookie，发现存在flag信息</p>
+</blockquote>
+<p><a href="https://ntrack.github.io/2023/05/28/Cookie/">了解cookie</a></p>
+<h2 id="以上总结一波"><a href="#以上总结一波" class="headerlink" title="以上总结一波"></a>以上总结一波</h2><p><strong>简单查看flag可以先调出调式器查看源码，然后再看network的信息，再对网站进行目录爆破，需要好好做好爆破字典收集</strong></p>
+<h2 id="web12"><a href="#web12" class="headerlink" title="web12"></a>web12</h2><p>考点:利用所有信息</p>
+<blockquote>
+<p>查看源码后没有发现，看了network的信息没有帮助，然后扫一波目录，发现了admin目录，进去发现需要密码，找了一圈就发现原来页面下面的数字有用，输入admin和数字，成功获得</p>
+</blockquote>
 
                 
             </div>
@@ -824,7 +846,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.1k</span>&nbsp;字
+                class="white-color">3.4k</span>&nbsp;字
             
             
             
