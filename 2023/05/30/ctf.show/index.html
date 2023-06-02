@@ -419,21 +419,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-06-01
+                    2023-06-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    374
+                    761
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -481,24 +481,37 @@
 <blockquote>
 <p>dirb 网址 自定义字典</p>
 </blockquote>
-<h2 id="web7-9"><a href="#web7-9" class="headerlink" title="web7-9"></a>web7-9</h2><p>考点:git源码泄露、svn源码泄露</p>
+<h2 id="web7-9"><a href="#web7-9" class="headerlink" title="web7-9"></a>web7-9</h2><p>考点：git源码泄露、svn源码泄露</p>
 <blockquote>
 <p>查看是否存在.git、.svn文件后缀:	网址&#x2F;.git	网址&#x2F;.svn</p>
 </blockquote>
-<h2 id="web10"><a href="#web10" class="headerlink" title="web10"></a>web10</h2><p>考点:vim缓存信息泄露</p>
+<h2 id="web10"><a href="#web10" class="headerlink" title="web10"></a>web10</h2><p>考点：vim缓存信息泄露</p>
 <blockquote>
 <p>再积累个字典信息，使用dirb进行爆破</p>
 </blockquote>
-<h2 id="web11"><a href="#web11" class="headerlink" title="web11"></a>web11</h2><p>考点:cookie传递信息</p>
+<h2 id="web11"><a href="#web11" class="headerlink" title="web11"></a>web11</h2><p>考点：cookie传递信息</p>
 <blockquote>
 <p>通过网页调试的network进行查看cookie，发现存在flag信息</p>
 </blockquote>
 <p><a href="https://ntrack.github.io/2023/05/28/Cookie/">了解cookie</a></p>
 <h2 id="以上总结一波"><a href="#以上总结一波" class="headerlink" title="以上总结一波"></a>以上总结一波</h2><p><strong>简单查看flag可以先调出调式器查看源码，然后再看network的信息，再对网站进行目录爆破，需要好好做好爆破字典收集</strong></p>
-<h2 id="web12"><a href="#web12" class="headerlink" title="web12"></a>web12</h2><p>考点:利用所有信息</p>
+<h2 id="web12"><a href="#web12" class="headerlink" title="web12"></a>web12</h2><p>考点：利用所有信息</p>
 <blockquote>
 <p>查看源码后没有发现，看了network的信息没有帮助，然后扫一波目录，发现了admin目录，进去发现需要密码，找了一圈就发现原来页面下面的数字有用，输入admin和数字，成功获得</p>
 </blockquote>
+<h2 id="web14"><a href="#web14" class="headerlink" title="web14"></a>web14</h2><p>考点：编辑器默认配置泄露网站根目录</p>
+<blockquote>
+<p>查看源码和其他信息，发现很多内容都是无用的，太多信息也没有看过来，根据提示找到了图1信息。进入以下目录editor&#x2F;upload&#x2F;发现是404信息，退一个目录进入editor发现是编辑器，点击一圈，发现存在插入文件有文件空间(即编辑器默认配置显示目录空间)，点击看到一堆的目录，事先看var目录下的信息，中奖发现www目录，进入html目录，发现一个nothinghere的目录，进入发现fl000g.txt文件，然后在目录栏中输入:网址&#x2F;nothinghere&#x2F;fl000g.txt看到flag。(发现editor目录也可以用dirb进行扫描，丰富了一波字典)</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306022320167.png" alt="图1"></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/angry_program/article/details/107855078">目录穿越&#x2F;遍历漏洞 – 学习笔记</a></p>
+<h2 id="web15"><a href="#web15" class="headerlink" title="web15"></a>web15</h2><p>考点：利用公开信息</p>
+<blockquote>
+<p>看了一波源码，并没有什么发现，只有一些英文和图片，然后没有发现有用信息，使用dirb扫描一波目录，发现了admin目录和admin&#x2F;index.php文件，点开admin.php发现是一个登录界面，然后尝试抓包跑了一波sqlmap，发现没有用，再回去点击忘记密码，发现需要密保(居住城市)，再返回查看首页，发现只有邮箱，然后查看QQ信息，发现是西安的，重置密码成功，再次登录成功获得flag。（有点假，就是收获个思想）</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306030008734.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306030009943.png"></p>
+<p><a target="_blank" rel="noopener" href="https://www.toolfk.com/tools/online-qq.html">QQ信息方便查找网站</a></p>
 
                 
             </div>
@@ -846,7 +859,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.4k</span>&nbsp;字
+                class="white-color">3.8k</span>&nbsp;字
             
             
             
