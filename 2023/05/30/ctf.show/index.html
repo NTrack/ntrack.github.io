@@ -426,14 +426,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    761
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -512,6 +512,33 @@
 <p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306030008734.png"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306030009943.png"></p>
 <p><a target="_blank" rel="noopener" href="https://www.toolfk.com/tools/online-qq.html">QQ信息方便查找网站</a></p>
+<h2 id="web16"><a href="#web16" class="headerlink" title="web16"></a>web16</h2><p>考点：PHP探针</p>
+<p>php探针是用来探测空间、服务器运行状况和PHP信息用的，探针可以实时查看服务器硬盘资源、内存占用、网卡流量、系统负载、服务器时间等信息</p>
+<blockquote>
+<p>查看源码发现都是css，js文件，没有用处，然后查看数据包发现也没有需要的信息，通过dirb扫描一波无用后，看了题解添加tz.php文件查看php探针。发现存在很多信息，根据提示查看phpinfo配置，发现其中有flag</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Cl0ud/p/15999347.html">了解一下phpinfo信息利用</a></p>
+<h2 id="web17"><a href="#web17" class="headerlink" title="web17"></a>web17</h2><p>考点：sql备份泄露</p>
+<blockquote>
+<p>查看源码发现没有什么信息，只有拼成的简陋图1，查看数据包也没有。使用dirb发现了backup.sql文件(图2)，下载发现flag</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306031920954.png" alt="图1"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306031922765.png" alt="图2"></p>
+<h2 id="web18"><a href="#web18" class="headerlink" title="web18"></a>web18</h2><p>考点：审查js代码</p>
+<blockquote>
+<p>查看了源码，发现只有js和css文件，然后查看数据包，没有需要信息，再用dirb扫一波，发现只有没用的loin.php，最后没有办法查看提示，发现是新接触的题型，对js进行审计，发现了game_over一开始为false，然后socre&gt;100的时候输出一些编码信息(图1)，然后直接对该信息进行unicode解码，发现是图2信息，然后根据提示看到flag，一开始题目也给了101分钟也是一种提示。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306032213677.png" alt="图1"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306032214501.png" alt="图2"></p>
+<p><a target="_blank" rel="noopener" href="https://www.toolhelper.cn/EncodeDecode/UnicodeChineseEncodeDecode">解码工具</a></p>
+<h2 id="web19"><a href="#web19" class="headerlink" title="web19"></a>web19</h2><p>考点：泄露重要信息在前端</p>
+<blockquote>
+<p>查看源码发现了重要信息(图1)，知道设置了username和pazzword并且这些值等于图上的值的时候echo flag，而且上面有对pazzword进行加密，所以直接用hackbar进行传输username和pazzword的明文，获取到flag</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306032241325.png" alt="图1"></p>
+<blockquote>
+<p>直接传递POST会将文明直接发送给服务器，但是这可能被拦截，所以会在前端进行一定的数据加密</p>
+</blockquote>
 
                 
             </div>
@@ -859,7 +886,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.8k</span>&nbsp;字
+                class="white-color">4.4k</span>&nbsp;字
             
             
             
