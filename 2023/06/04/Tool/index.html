@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="了解Base64编码, Ntrack">
+    <meta name="keywords" content="工具利用, Ntrack">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>了解Base64编码 | Ntrack</title>
+    <title>工具利用 | Ntrack</title>
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/awesome/css/all.css">
@@ -271,7 +271,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">了解Base64编码</h1>
+                    <h1 class="description center-align post-title">工具利用</h1>
                 </div>
             </div>
         </div>
@@ -387,8 +387,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BC%96%E7%A0%81/">
-                                <span class="chip bg-color">编码</span>
+                            <a href="/tags/CTF/">
+                                <span class="chip bg-color">CTF</span>
                             </a>
                         
                     </div>
@@ -399,8 +399,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/" class="post-category">
-                                基础认识
+                            <a href="/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/" class="post-category">
+                                工具集
                             </a>
                         
                     </div>
@@ -412,28 +412,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-05-28
+                    2023-06-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-06-01
+                    2023-06-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    484
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
 
@@ -451,191 +451,136 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Base64编码"><a href="#Base64编码" class="headerlink" title="Base64编码"></a>Base64编码</h1><p>原来内容用UTF-8编码转化为底层二进制，根据编码规则和编码索引表转化成为base64内容。</p>
-<h2 id="编码内容"><a href="#编码内容" class="headerlink" title="编码内容"></a>编码内容</h2><p>Base64编码可以打印64个不同字符，分别为字母 A-Z、a-z、数字 0-9，还有’+’和’&#x2F;‘。(特殊的情况还有一个’&#x3D;’)</p>
-<h2 id="编码索引"><a href="#编码索引" class="headerlink" title="编码索引:"></a>编码索引:</h2><table>
-<thead>
-<tr>
-<th>码值</th>
-<th>字符</th>
-<th>码值</th>
-<th>字符</th>
-<th>码值</th>
-<th>字符</th>
-<th>码值</th>
-<th>字符</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0</td>
-<td>A</td>
-<td>16</td>
-<td>Q</td>
-<td>32</td>
-<td>g</td>
-<td>48</td>
-<td>w</td>
-</tr>
-<tr>
-<td>1</td>
-<td>B</td>
-<td>17</td>
-<td>R</td>
-<td>33</td>
-<td>h</td>
-<td>49</td>
-<td>x</td>
-</tr>
-<tr>
-<td>2</td>
-<td>C</td>
-<td>18</td>
-<td>S</td>
-<td>34</td>
-<td>i</td>
-<td>50</td>
-<td>y</td>
-</tr>
-<tr>
-<td>3</td>
-<td>D</td>
-<td>19</td>
-<td>T</td>
-<td>35</td>
-<td>j</td>
-<td>51</td>
-<td>z</td>
-</tr>
-<tr>
-<td>4</td>
-<td>E</td>
-<td>20</td>
-<td>U</td>
-<td>36</td>
-<td>k</td>
-<td>52</td>
-<td>0</td>
-</tr>
-<tr>
-<td>5</td>
-<td>F</td>
-<td>21</td>
-<td>V</td>
-<td>37</td>
-<td>l</td>
-<td>53</td>
-<td>1</td>
-</tr>
-<tr>
-<td>6</td>
-<td>G</td>
-<td>22</td>
-<td>W</td>
-<td>38</td>
-<td>m</td>
-<td>54</td>
-<td>2</td>
-</tr>
-<tr>
-<td>7</td>
-<td>H</td>
-<td>23</td>
-<td>X</td>
-<td>39</td>
-<td>n</td>
-<td>55</td>
-<td>3</td>
-</tr>
-<tr>
-<td>8</td>
-<td>I</td>
-<td>24</td>
-<td>Y</td>
-<td>40</td>
-<td>o</td>
-<td>56</td>
-<td>4</td>
-</tr>
-<tr>
-<td>9</td>
-<td>J</td>
-<td>25</td>
-<td>Z</td>
-<td>41</td>
-<td>p</td>
-<td>57</td>
-<td>5</td>
-</tr>
-<tr>
-<td>10</td>
-<td>K</td>
-<td>26</td>
-<td>a</td>
-<td>42</td>
-<td>q</td>
-<td>58</td>
-<td>6</td>
-</tr>
-<tr>
-<td>11</td>
-<td>L</td>
-<td>27</td>
-<td>b</td>
-<td>43</td>
-<td>r</td>
-<td>59</td>
-<td>7</td>
-</tr>
-<tr>
-<td>12</td>
-<td>M</td>
-<td>28</td>
-<td>c</td>
-<td>44</td>
-<td>s</td>
-<td>60</td>
-<td>8</td>
-</tr>
-<tr>
-<td>13</td>
-<td>N</td>
-<td>29</td>
-<td>d</td>
-<td>45</td>
-<td>t</td>
-<td>61</td>
-<td>9</td>
-</tr>
-<tr>
-<td>14</td>
-<td>O</td>
-<td>30</td>
-<td>e</td>
-<td>46</td>
-<td>u</td>
-<td>62</td>
-<td>+</td>
-</tr>
-<tr>
-<td>15</td>
-<td>P</td>
-<td>31</td>
-<td>f</td>
-<td>47</td>
-<td>v</td>
-<td>63</td>
-<td>&#x2F;</td>
-</tr>
-</tbody></table>
-<h2 id="编码规则"><a href="#编码规则" class="headerlink" title="编码规则"></a>编码规则</h2><p>1.把每<strong>三个 8Bit 字节</strong>转换为<strong>四个 6Bit 字节</strong></p>
+                <h2 id="Sqlmap"><a href="#Sqlmap" class="headerlink" title="Sqlmap"></a>Sqlmap</h2><p>sqlmap是一个自动化的SQL注入工具，其主要功能是扫描，发现并利用给定的URL进行SQL注入</p>
 <blockquote>
-<p>例子:abc<br>二进制转化(3个8bit):<br>01100001&amp;ensp;&amp;ensp; 01100010&amp;ensp;&amp;ensp;01100011<br><br>二进制转化(4个6bit)<br>011000&amp;ensp;&amp;ensp;010110&amp;ensp;&amp;ensp; 000101&amp;ensp;&amp;ensp; 100011<br><br>abc根据base64编码索引表转化为:YWJj</p>
+<p>kali使用：sqlmap -u “url” (–data&#x3D;” xxx”) 参数</p>
 </blockquote>
-<p>2.<strong>不够3个字符的需要补00(单字符高位补00，两字符低位补00)<strong>，存在</strong>空位</strong>用’<strong>&#x3D;</strong>‘来补充</p>
+<h3 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h3><blockquote>
+<ol>
+<li><code>--dbs</code> 目标服务器中有什么数据库，常用，直接用<code>--dbs</code></li>
+<li><code>--tables</code> 目标数据库有什么表，常用，直接用<code>--tables</code></li>
+<li><code>--columns</code> 目标表中有什么列，常用，直接用<code>--colums</code></li>
+<li><code>-D DB</code> 指定从某个数据库查询数据，常用。例： <code>-D admindb</code></li>
+<li><code>-T TBL</code> 指定从某个表查询数据，常用。例： <code>-T admintable</code></li>
+<li><code>-C COL</code> 指定从某个列查询数据，常用。例： <code>-C username</code></li>
+<li><code>--dump</code> 查询指定范围的全部数据。例： <code>--dump -D admin -T admin -C username</code></li>
+<li><code>--where=DUMPWHERE</code> 在dump表时使用where限制条件。</li>
+<li><code>--batch</code> 批处理，在检测过程中会问用户一些问题，使用这个参数统统使用默认值。</li>
+</ol>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Breeze_CAT/article/details/80628392">sqlmap参数参考</a></p>
 <blockquote>
-<p>例子1:a<br>二进制转化(只有1个8bit):<br>01100001<br>二进制转化为(只有2个6bit):<br><strong>00</strong>0110 &amp;ensp;&amp;ensp;<strong>00</strong>0001&amp;ensp;&amp;ensp; 空&amp;ensp;&amp;ensp; 空<br>a根据base64编码索引表转化为:YQ&#x3D;&#x3D;<br><br>例子2:ab<br>二进制转化(只有2个8bit):<br>01100001&amp;ensp;&amp;ensp; 01100010<br>二进制转化为(只有3个6bit):<br>011000&amp;ensp;&amp;ensp;010110&amp;ensp;&amp;ensp;0010<strong>00</strong>&amp;ensp;&amp;ensp;空<br>ab根据base64编码索引表转化为:YWI&#x3D;</p>
+<p>tamper是sqlmap提供的饶过脚本，使sqlmap更加强有力的渗透</p>
+<p>tamper使用：–tamper  “脚本名称”</p>
+<p>脚本在kali下的路径：&#x2F;usr&#x2F;share&#x2F;sqlmap&#x2F;tamper&#x2F;</p>
 </blockquote>
-<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>1.证书<br>2.XML镶嵌进另一个XML文件<br>3.网页的小图片镶入<br>4.较老的纯文本协议 SMTP</p>
+<h3 id="tamper脚本分类说明"><a href="#tamper脚本分类说明" class="headerlink" title="tamper脚本分类说明"></a>tamper脚本分类说明</h3><blockquote>
+<p>1、apostrophemask.py ：将引号替换为UTF-8,用于过滤单引号。安全</p>
+<p>2、base64encode.py :替换为base64编码。app</p>
+<p>3、multiplespaces.py:围绕SQL关键字添加多个空格。dom</p>
+<p>4、space2plus.py:用+号替换为空格。ide</p>
+<p>5、nonrecursivereplacement.py:做为双重查询语句，用双重语句替代预约义的SQL关键字（适用于很是弱的自定义过滤器，例如将SELECT替换为空）。函数</p>
+<p>6、space2randomblank.py:将空格替换为其余有效字符。post</p>
+<p>7、unionalltounion.py:将UNION ALL SELECT替换为UNION SELECT。测试</p>
+<p>8、securespher.py:追加特制的字符串。</p>
+<p>9、space2hash.py:将空格替换为#号，并添加一个随机字符串和换行符。</p>
+<p>10、space2mssqlblank.py（mssql）：将空格替换为其余空符号。</p>
+<p>11、spce2mssqlhash.py:将空格替换为#号，并添加一个换行符。</p>
+<p>12、between.py:用NOT BETWEEN 0 AND 替换大于号（&gt;）,用BETWEN AND 替换等号(&#x3D;)。</p>
+<p>13、percentage.py:ASP容许在每一个字符前面添加一个%号1.</p>
+<p>14、sp_password.py:从DBMS日志的自动模糊处理的有效载荷中追加sp_password。</p>
+<p>15、charencode.py:对给定的Payload所有字符使用URL编码（不处理已经编码的字符）。</p>
+<p>16、randomcase.py:随机大小写。</p>
+<p>17、charunicodeencode.py:字符串unicode编码。</p>
+<p>18、space2comment.py:将空格替换为&#x2F;**&#x2F;。</p>
+<p>19、equaltolike.py:将等号替换为like。</p>
+<p>20、greatest.py:绕过对”&gt;”的过滤，用GREATEEST替换大于号。</p>
+<p>以上测试经过的数据库类型和版本：</p>
+<p>mysql4、mysql5.0和mysql5.5</p>
+<p>orcale10g</p>
+<p>postgresql8.3、postgresql 8.4和postgresql9.0</p>
+<p>21、ifnull2ifisnull.py:绕过对IFNULL的过滤，替换相似IFNULL（A,B)为IF（ISNULL(A),B,A)。</p>
+<p>测试经过的数据库类型和版本为MySQL 5.0和MySQL 5.5</p>
+<p>22、modsecurityversioned.py:过滤空格，使用MySQL内联注释的方式进行注入。</p>
+<p>测试经过的数据库类型和版本为MySQL5.0</p>
+<p>23、space2mysalblank.py:将空格替换为其它空白符号（适用于MySQL)</p>
+<p>测试经过的数据库类型和版本为MySQL5.1</p>
+<p>24、modesecurityzeroversioned.py:使用MySQL内联注释的方式（&#x2F;<em>！00000</em>&#x2F;）</p>
+<p>测试经过的数据库类型和版本为MySQL 5.0</p>
+<p>25、space2mysqldash.py:将空格替换为–，并添加一个换行符。</p>
+<p>26、bluecoat.py:在SQL语句以后用有效的随机空白符替换空格符，随后用LIKE替换等于号。</p>
+<p>测试经过的数据库类型和版本为MySQL5.1和SGOS</p>
+<p>27、versionedkeywords.py：注释绕过。</p>
+<p>28、halfversionedmorekeywords.py:当数据库为MySQL时绕过防火墙，在每一个关键字以前添加MySQL版本注释。</p>
+<p>测试经过的数据库类型和版本为MySQL 4.0.18和MySQL 5.0.22</p>
+<p>29、space2morehash.py:将空格替换为#号，并添加一个随机字符串和换行符。</p>
+<p>测试经过的数据库类型和版本为MySQL5.1.14</p>
+<p>30、apostrophenullencode.py:用非法双字节unicode字符替换单引号。</p>
+<p>31、appendnullbyte.py:在有效负荷的结束位置加载零字节字符编码。</p>
+<p>32、chardoubleeencode.py:对给定的Payload所有字符使用双重URL编码（不处理已编码的字符）。</p>
+<p>33、unmagicquotes.py:用一个多字节组合（%bf%27）和末尾通用注释也一块儿替换空格。</p>
+<p>34、randomcomments.py:用&#x2F;**&#x2F;分割SQL关键字。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306042330288.png"></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/whatday/article/details/54774043">tamper绕过参考</a></p>
+<h2 id="Dirb"><a href="#Dirb" class="headerlink" title="Dirb"></a>Dirb</h2><p>dirb是一个基于字典的web目录扫描工具</p>
+<blockquote>
+<p>kali使用：dirb  “url”  字典  参数…</p>
+<p>字典路径：&#x2F;usr&#x2F;share&#x2F;wordlists&#x2F;dirb</p>
+</blockquote>
+<h3 id="常用参数-1"><a href="#常用参数-1" class="headerlink" title="常用参数"></a>常用参数</h3><blockquote>
+<ol>
+<li><p>-a <agent_string>：指定您的定制USER_AGENT。</p>
+</li>
+<li><p>-c <cookie_string>：为HTTP请求设置cookie。</p>
+</li>
+<li><p>-f：精细调整NOT_FOUND（404）检测。</p>
+</li>
+<li><p>-H <header_string>：将自定义标头添加到HTTP请求。</p>
+</li>
+<li><p>-i：使用不区分大小写的搜索。</p>
+</li>
+<li><p>-l：找到时打印“ Location”标题。</p>
+</li>
+<li><p>-N <nf_code>：忽略此HTTP代码的响应。</p>
+</li>
+<li><p>-o &lt;输出文件&gt;：将输出保存到磁盘。</p>
+</li>
+<li><p>-p &lt;代理[：端口]&gt;：使用此代理。（默认端口为1080）</p>
+</li>
+<li><p>-P &lt;proxy_username：proxy_password&gt;：代理身份验证。</p>
+</li>
+<li><p>-r：不要递归搜索。</p>
+</li>
+<li><p>-R：交互式递归。（询问每个目录）</p>
+</li>
+<li><p>-S：静默模式。不要显示经过测试的单词。（用于哑终端）</p>
+</li>
+<li><p>-t：不要在网址上强制使用结尾的“ &#x2F;”。</p>
+</li>
+<li><p>-u &lt;用户名：密码&gt;：HTTP身份验证。</p>
+</li>
+<li><p>-v：也显示NOT_FOUND页。</p>
+</li>
+<li><p>-w：不要在警告消息上停止。</p>
+</li>
+<li><p>-X &lt;扩展名&gt; &#x2F; -x &lt;扩展名文件&gt;：在每个单词后加上该扩展名。</p>
+</li>
+<li><p>-z：添加毫秒延迟，以免导致过多的Flood。</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="AntSword"><a href="#AntSword" class="headerlink" title="AntSword"></a>AntSword</h2><p>中国蚁剑是跨平台网站管理工具</p>
+<h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><blockquote>
+<ol>
+<li>查看是否有可以放入shell的地方</li>
+<li>可以放置shell进行切入</li>
+<li>登录蚁剑，连接的url为shell存放的地方</li>
+<li>如果shell为PHP类型，且用post之类的传值，则密码为post的value值</li>
+</ol>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/antswordproject/antsword/wfgguz">蚁剑使用文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.freebuf.com/sectool/317346.html">蚁剑的正确使用</a></p>
 
                 
             </div>
@@ -650,8 +595,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BC%96%E7%A0%81/">
-                                    <span class="chip bg-color">编码</span>
+                                <a href="/tags/CTF/">
+                                    <span class="chip bg-color">CTF</span>
                                 </a>
                             
                         </div>
@@ -692,17 +637,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/05/28/xctf-easyphp/">
+                <a href="/2023/06/04/Tool/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/11.jpg" class="responsive-img" alt="XCTF题目——easyphp">
+                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="工具利用">
                         
-                        <span class="card-title">XCTF题目——easyphp</span>
+                        <span class="card-title">工具利用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -712,9 +658,59 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/" class="post-category">
+                                    工具集
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CTF/">
+                        <span class="chip bg-color">CTF</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/06/04/Buff/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="Buff的Web">
+                        
+                        <span class="card-title">Buff的Web</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -730,51 +726,10 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/xctf/">
-                        <span class="chip bg-color">xctf</span>
+                    <a href="/tags/Buff/">
+                        <span class="chip bg-color">Buff</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/05/28/WAF%E4%BB%A5%E5%8F%8A%E5%85%B6%E7%BB%95%E8%BF%87%E6%96%B9%E5%BC%8F/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="WAF以及其绕过方式">
-                        
-                        <span class="card-title">WAF以及其绕过方式</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%97%AE%E9%A2%98%E9%9B%86/" class="post-category">
-                                    问题集
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>

@@ -4,11 +4,61 @@
   
     
     <entry>
+      <title>工具利用</title>
+      <link href="/2023/06/04/Tool/"/>
+      <url>/2023/06/04/Tool/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Sqlmap"><a href="#Sqlmap" class="headerlink" title="Sqlmap"></a>Sqlmap</h2><p>sqlmap是一个自动化的SQL注入工具，其主要功能是扫描，发现并利用给定的URL进行SQL注入</p><blockquote><p>kali使用：sqlmap -u “url” (–data&#x3D;” xxx”) 参数</p></blockquote><h3 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h3><blockquote><ol><li><code>--dbs</code> 目标服务器中有什么数据库，常用，直接用<code>--dbs</code></li><li><code>--tables</code> 目标数据库有什么表，常用，直接用<code>--tables</code></li><li><code>--columns</code> 目标表中有什么列，常用，直接用<code>--colums</code></li><li><code>-D DB</code> 指定从某个数据库查询数据，常用。例： <code>-D admindb</code></li><li><code>-T TBL</code> 指定从某个表查询数据，常用。例： <code>-T admintable</code></li><li><code>-C COL</code> 指定从某个列查询数据，常用。例： <code>-C username</code></li><li><code>--dump</code> 查询指定范围的全部数据。例： <code>--dump -D admin -T admin -C username</code></li><li><code>--where=DUMPWHERE</code> 在dump表时使用where限制条件。</li><li><code>--batch</code> 批处理，在检测过程中会问用户一些问题，使用这个参数统统使用默认值。</li></ol></blockquote><p><a href="https://blog.csdn.net/Breeze_CAT/article/details/80628392">sqlmap参数参考</a></p><blockquote><p>tamper是sqlmap提供的饶过脚本，使sqlmap更加强有力的渗透</p><p>tamper使用：–tamper  “脚本名称”</p><p>脚本在kali下的路径：&#x2F;usr&#x2F;share&#x2F;sqlmap&#x2F;tamper&#x2F;</p></blockquote><h3 id="tamper脚本分类说明"><a href="#tamper脚本分类说明" class="headerlink" title="tamper脚本分类说明"></a>tamper脚本分类说明</h3><blockquote><p>1、apostrophemask.py ：将引号替换为UTF-8,用于过滤单引号。安全</p><p>2、base64encode.py :替换为base64编码。app</p><p>3、multiplespaces.py:围绕SQL关键字添加多个空格。dom</p><p>4、space2plus.py:用+号替换为空格。ide</p><p>5、nonrecursivereplacement.py:做为双重查询语句，用双重语句替代预约义的SQL关键字（适用于很是弱的自定义过滤器，例如将SELECT替换为空）。函数</p><p>6、space2randomblank.py:将空格替换为其余有效字符。post</p><p>7、unionalltounion.py:将UNION ALL SELECT替换为UNION SELECT。测试</p><p>8、securespher.py:追加特制的字符串。</p><p>9、space2hash.py:将空格替换为#号，并添加一个随机字符串和换行符。</p><p>10、space2mssqlblank.py（mssql）：将空格替换为其余空符号。</p><p>11、spce2mssqlhash.py:将空格替换为#号，并添加一个换行符。</p><p>12、between.py:用NOT BETWEEN 0 AND 替换大于号（&gt;）,用BETWEN AND 替换等号(&#x3D;)。</p><p>13、percentage.py:ASP容许在每一个字符前面添加一个%号1.</p><p>14、sp_password.py:从DBMS日志的自动模糊处理的有效载荷中追加sp_password。</p><p>15、charencode.py:对给定的Payload所有字符使用URL编码（不处理已经编码的字符）。</p><p>16、randomcase.py:随机大小写。</p><p>17、charunicodeencode.py:字符串unicode编码。</p><p>18、space2comment.py:将空格替换为&#x2F;**&#x2F;。</p><p>19、equaltolike.py:将等号替换为like。</p><p>20、greatest.py:绕过对”&gt;”的过滤，用GREATEEST替换大于号。</p><p>以上测试经过的数据库类型和版本：</p><p>mysql4、mysql5.0和mysql5.5</p><p>orcale10g</p><p>postgresql8.3、postgresql 8.4和postgresql9.0</p><p>21、ifnull2ifisnull.py:绕过对IFNULL的过滤，替换相似IFNULL（A,B)为IF（ISNULL(A),B,A)。</p><p>测试经过的数据库类型和版本为MySQL 5.0和MySQL 5.5</p><p>22、modsecurityversioned.py:过滤空格，使用MySQL内联注释的方式进行注入。</p><p>测试经过的数据库类型和版本为MySQL5.0</p><p>23、space2mysalblank.py:将空格替换为其它空白符号（适用于MySQL)</p><p>测试经过的数据库类型和版本为MySQL5.1</p><p>24、modesecurityzeroversioned.py:使用MySQL内联注释的方式（&#x2F;<em>！00000</em>&#x2F;）</p><p>测试经过的数据库类型和版本为MySQL 5.0</p><p>25、space2mysqldash.py:将空格替换为–，并添加一个换行符。</p><p>26、bluecoat.py:在SQL语句以后用有效的随机空白符替换空格符，随后用LIKE替换等于号。</p><p>测试经过的数据库类型和版本为MySQL5.1和SGOS</p><p>27、versionedkeywords.py：注释绕过。</p><p>28、halfversionedmorekeywords.py:当数据库为MySQL时绕过防火墙，在每一个关键字以前添加MySQL版本注释。</p><p>测试经过的数据库类型和版本为MySQL 4.0.18和MySQL 5.0.22</p><p>29、space2morehash.py:将空格替换为#号，并添加一个随机字符串和换行符。</p><p>测试经过的数据库类型和版本为MySQL5.1.14</p><p>30、apostrophenullencode.py:用非法双字节unicode字符替换单引号。</p><p>31、appendnullbyte.py:在有效负荷的结束位置加载零字节字符编码。</p><p>32、chardoubleeencode.py:对给定的Payload所有字符使用双重URL编码（不处理已编码的字符）。</p><p>33、unmagicquotes.py:用一个多字节组合（%bf%27）和末尾通用注释也一块儿替换空格。</p><p>34、randomcomments.py:用&#x2F;**&#x2F;分割SQL关键字。</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306042330288.png"></p><p><a href="https://blog.csdn.net/whatday/article/details/54774043">tamper绕过参考</a></p><h2 id="Dirb"><a href="#Dirb" class="headerlink" title="Dirb"></a>Dirb</h2><p>dirb是一个基于字典的web目录扫描工具</p><blockquote><p>kali使用：dirb  “url”  字典  参数…</p><p>字典路径：&#x2F;usr&#x2F;share&#x2F;wordlists&#x2F;dirb</p></blockquote><h3 id="常用参数-1"><a href="#常用参数-1" class="headerlink" title="常用参数"></a>常用参数</h3><blockquote><ol><li><p>-a <agent_string>：指定您的定制USER_AGENT。</p></li><li><p>-c <cookie_string>：为HTTP请求设置cookie。</p></li><li><p>-f：精细调整NOT_FOUND（404）检测。</p></li><li><p>-H <header_string>：将自定义标头添加到HTTP请求。</p></li><li><p>-i：使用不区分大小写的搜索。</p></li><li><p>-l：找到时打印“ Location”标题。</p></li><li><p>-N <nf_code>：忽略此HTTP代码的响应。</p></li><li><p>-o &lt;输出文件&gt;：将输出保存到磁盘。</p></li><li><p>-p &lt;代理[：端口]&gt;：使用此代理。（默认端口为1080）</p></li><li><p>-P &lt;proxy_username：proxy_password&gt;：代理身份验证。</p></li><li><p>-r：不要递归搜索。</p></li><li><p>-R：交互式递归。（询问每个目录）</p></li><li><p>-S：静默模式。不要显示经过测试的单词。（用于哑终端）</p></li><li><p>-t：不要在网址上强制使用结尾的“ &#x2F;”。</p></li><li><p>-u &lt;用户名：密码&gt;：HTTP身份验证。</p></li><li><p>-v：也显示NOT_FOUND页。</p></li><li><p>-w：不要在警告消息上停止。</p></li><li><p>-X &lt;扩展名&gt; &#x2F; -x &lt;扩展名文件&gt;：在每个单词后加上该扩展名。</p></li><li><p>-z：添加毫秒延迟，以免导致过多的Flood。</p></li></ol></blockquote><h2 id="AntSword"><a href="#AntSword" class="headerlink" title="AntSword"></a>AntSword</h2><p>中国蚁剑是跨平台网站管理工具</p><h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><blockquote><ol><li>查看是否有可以放入shell的地方</li><li>可以放置shell进行切入</li><li>登录蚁剑，连接的url为shell存放的地方</li><li>如果shell为PHP类型，且用post之类的传值，则密码为post的value值</li></ol></blockquote><p><a href="https://www.yuque.com/antswordproject/antsword/wfgguz">蚁剑使用文档</a></p><p><a href="https://www.freebuf.com/sectool/317346.html">蚁剑的正确使用</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具集 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Buff的Web</title>
+      <link href="/2023/06/04/Buff/"/>
+      <url>/2023/06/04/Buff/</url>
+      
+        <content type="html"><![CDATA[<h2 id="ACTF2020-新生赛-Include1"><a href="#ACTF2020-新生赛-Include1" class="headerlink" title="[ACTF2020 新生赛]Include1"></a>[ACTF2020 新生赛]Include1</h2><p>考点：文件包含</p><blockquote><p>查看了源码和数据包，发现没有想要的信息，又爆破的一波目录，并没有有用目录，几乎都指向index.php，突然灵光一闪，想着会不会是无法显示的信息，然后用PHP伪协议进行base64编码，发现了一串编码，然后解码获取flag。</p></blockquote><p>使用是伪协议：?filename&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;xxx.php</p><blockquote><p>filter：滤器</p><p>该协议的作用：作为一个中间流来处理其他流，可以进行任意文件的读取(获取页面源码)</p></blockquote><p><a href="https://zhuanlan.zhihu.com/p/540864302">伪协议了解</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 题目集 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Buff </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>web基础</title>
       <link href="/2023/06/03/ctf_showhard/"/>
       <url>/2023/06/03/ctf_showhard/</url>
       
-        <content type="html"><![CDATA[<h2 id="web3"><a href="#web3" class="headerlink" title="web3"></a>web3</h2><p>考点：php：input伪协议的利用(常见于文件包含和结合file_get_contents)</p><blockquote><p>php:&#x2F;&#x2F;input 是个可以访问请求的原始数据的只读流</p></blockquote><blockquote><p>php:&#x2F;&#x2F;input协议无法在content-type是multipart&#x2F;form-data的时候使用,php:&#x2F;&#x2F;input访问的还是原始数据,而经过表单post会经过一次url编码，常与file_get_contents结合使用。可以自定义post信息</p></blockquote><p><a href="https://www.freebuf.com/articles/web/362895.html">伪协议php:input命令执行的原理</a></p><p><a href="https://blog.csdn.net/qq_53142368/article/details/116594299">PHP伪协议</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="web3"><a href="#web3" class="headerlink" title="web3"></a>web3</h2><p>考点：php：input伪协议的利用(常见于文件包含和结合file_get_contents)</p><blockquote><p>php:&#x2F;&#x2F;input 是个可以访问请求的原始数据的只读流</p></blockquote><blockquote><p>php:&#x2F;&#x2F;input协议无法在content-type是multipart&#x2F;form-data的时候使用,php:&#x2F;&#x2F;input访问的还是原始数据,而经过表单post会经过一次url编码，常与file_get_contents结合使用。可以自定义post信息</p></blockquote><p><a href="https://www.freebuf.com/articles/web/362895.html">伪协议php:input命令执行的原理</a></p><p><a href="https://blog.csdn.net/qq_53142368/article/details/116594299">PHP伪协议</a></p><p><a href="https://zhuanlan.zhihu.com/p/540864302">伪协议了解</a></p>]]></content>
       
       
       <categories>
