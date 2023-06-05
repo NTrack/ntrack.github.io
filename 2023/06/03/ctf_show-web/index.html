@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="web入门, Ntrack">
+    <meta name="keywords" content="web基础, Ntrack">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>web入门 | Ntrack</title>
+    <title>web基础 | Ntrack</title>
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/awesome/css/all.css">
@@ -266,12 +266,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">web入门</h1>
+                    <h1 class="description center-align post-title">web基础</h1>
                 </div>
             </div>
         </div>
@@ -412,28 +412,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-05-30
+                    2023-06-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-06-03
+                    2023-06-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    307
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -451,94 +451,29 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="web1-3"><a href="#web1-3" class="headerlink" title="web1-3"></a>web1-3</h2><blockquote>
-<p>web1：</p>
-<p>1.直接查看源码即可</p>
+                <h2 id="web3"><a href="#web3" class="headerlink" title="web3"></a>web3</h2><p>考点：文件包含漏洞</p>
+<blockquote>
+<p>php:&#x2F;&#x2F;input 是个可以访问请求的原始数据的只读流(常见于文件包含和结合file_get_contents)</p>
 </blockquote>
 <blockquote>
-<p>web2：</p>
-<p>1.可以使用Ctrl+U查看源码		</p>
-<p>2.火狐浏览器的网址栏输入about:config，再输入javascript关闭它即可</p>
+<p>php:&#x2F;&#x2F;input协议无法在content-type是multipart&#x2F;form-data的时候使用,php:&#x2F;&#x2F;input访问的还是原始数据,而经过表单post会经过一次url编码，常与file_get_contents结合使用。可以自定义post信息</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/362895.html">伪协议php:input命令执行的原理</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_53142368/article/details/116594299">PHP伪协议</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/540864302">伪协议了解</a></p>
+<h2 id="web4"><a href="#web4" class="headerlink" title="web4"></a>web4</h2><p>考点：文件包含漏洞</p>
+<blockquote>
+<p>思路：想要学web3一样使用伪协议，发现报错，估计过滤了，然后没有思路了，查看wp，发现可以用shell连接。</p>
 </blockquote>
 <blockquote>
-<p>web3：</p>
-<p>1.发现源码没有信息，查看响应包，F2然后查看network</p>
+<p>1.抓包发送到Repeater查看raw发现Server: nginx&#x2F;1.18.0 (Ubuntu)</p>
+<p>2.尝试查看nignx的默认日志文件(&#x2F;var&#x2F;log&#x2F;nginx&#x2F;access.log和&#x2F;var&#x2F;log&#x2F;nginx&#x2F;error.log),发现访问日志存在，并且里面的值都是UA</p>
+<p>3.通过UA向上传一句话代码<?php @eval($_POST['flag']);?></p>
+<p>4.使用蚁剑进行连接，当前环境下URL为放置代码的位置，密码为POST的value即flag</p>
+<p>5.查看文件管理发现flag.txt</p>
 </blockquote>
-<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status">了解响应包</a></p>
-<h2 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h2><p>考点：robots协议</p>
-<p><a href="https://ntrack.github.io/2023/05/30/robots%E5%8D%8F%E8%AE%AE/">简单了解robots协议</a></p>
-<blockquote>
-<p>输入：网址&#x2F;robots.txt</p>
-</blockquote>
-<p>获取到信息，存在不想被爬的flagishere.txt文件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202305302304248.png"></p>
-<blockquote>
-<p>再输入：网址&#x2F;flagishere.txt</p>
-<p>获取到flag</p>
-</blockquote>
-<h2 id="web5-6"><a href="#web5-6" class="headerlink" title="web5-6"></a>web5-6</h2><p>考点：phps文件泄露、www源码泄露</p>
-<p>积累个字典，使用dirb去爆破目录</p>
-<blockquote>
-<p>dirb 网址 自定义字典</p>
-</blockquote>
-<h2 id="web7-9"><a href="#web7-9" class="headerlink" title="web7-9"></a>web7-9</h2><p>考点：git源码泄露、svn源码泄露</p>
-<blockquote>
-<p>查看是否存在.git、.svn文件后缀:	网址&#x2F;.git	网址&#x2F;.svn</p>
-</blockquote>
-<h2 id="web10"><a href="#web10" class="headerlink" title="web10"></a>web10</h2><p>考点：vim缓存信息泄露</p>
-<blockquote>
-<p>再积累个字典信息，使用dirb进行爆破</p>
-</blockquote>
-<h2 id="web11"><a href="#web11" class="headerlink" title="web11"></a>web11</h2><p>考点：cookie传递信息</p>
-<blockquote>
-<p>通过网页调试的network进行查看cookie，发现存在flag信息</p>
-</blockquote>
-<p><a href="https://ntrack.github.io/2023/05/28/Cookie/">了解cookie</a></p>
-<h2 id="以上总结一波"><a href="#以上总结一波" class="headerlink" title="以上总结一波"></a>以上总结一波</h2><p><strong>简单查看flag可以先调出调式器查看源码，然后再看network的信息，再对网站进行目录爆破，需要好好做好爆破字典收集</strong></p>
-<h2 id="web12"><a href="#web12" class="headerlink" title="web12"></a>web12</h2><p>考点：利用所有信息</p>
-<blockquote>
-<p>查看源码后没有发现，看了network的信息没有帮助，然后扫一波目录，发现了admin目录，进去发现需要密码，找了一圈就发现原来页面下面的数字有用，输入admin和数字，成功获得</p>
-</blockquote>
-<h2 id="web14"><a href="#web14" class="headerlink" title="web14"></a>web14</h2><p>考点：编辑器默认配置泄露网站根目录</p>
-<blockquote>
-<p>查看源码和其他信息，发现很多内容都是无用的，太多信息也没有看过来，根据提示找到了图1信息。进入以下目录editor&#x2F;upload&#x2F;发现是404信息，退一个目录进入editor发现是编辑器，点击一圈，发现存在插入文件有文件空间(即编辑器默认配置显示目录空间)，点击看到一堆的目录，事先看var目录下的信息，中奖发现www目录，进入html目录，发现一个nothinghere的目录，进入发现fl000g.txt文件，然后在目录栏中输入:网址&#x2F;nothinghere&#x2F;fl000g.txt看到flag。(发现editor目录也可以用dirb进行扫描，丰富了一波字典)</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306022320167.png" alt="图1"></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/angry_program/article/details/107855078">目录穿越&#x2F;遍历漏洞 – 学习笔记</a></p>
-<h2 id="web15"><a href="#web15" class="headerlink" title="web15"></a>web15</h2><p>考点：利用公开信息</p>
-<blockquote>
-<p>看了一波源码，并没有什么发现，只有一些英文和图片，然后没有发现有用信息，使用dirb扫描一波目录，发现了admin目录和admin&#x2F;index.php文件，点开admin.php发现是一个登录界面，然后尝试抓包跑了一波sqlmap，发现没有用，再回去点击忘记密码，发现需要密保(居住城市)，再返回查看首页，发现只有邮箱，然后查看QQ信息，发现是西安的，重置密码成功，再次登录成功获得flag。（有点假，就是收获个思想）</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306030008734.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306030009943.png"></p>
-<p><a target="_blank" rel="noopener" href="https://www.toolfk.com/tools/online-qq.html">QQ信息方便查找网站</a></p>
-<h2 id="web16"><a href="#web16" class="headerlink" title="web16"></a>web16</h2><p>考点：PHP探针</p>
-<p>php探针是用来探测空间、服务器运行状况和PHP信息用的，探针可以实时查看服务器硬盘资源、内存占用、网卡流量、系统负载、服务器时间等信息</p>
-<blockquote>
-<p>查看源码发现都是css，js文件，没有用处，然后查看数据包发现也没有需要的信息，通过dirb扫描一波无用后，看了题解添加tz.php文件查看php探针。发现存在很多信息，根据提示查看phpinfo配置，发现其中有flag</p>
-</blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Cl0ud/p/15999347.html">了解一下phpinfo信息利用</a></p>
-<h2 id="web17"><a href="#web17" class="headerlink" title="web17"></a>web17</h2><p>考点：sql备份泄露</p>
-<blockquote>
-<p>查看源码发现没有什么信息，只有拼成的简陋图1，查看数据包也没有。使用dirb发现了backup.sql文件(图2)，下载发现flag</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306031920954.png" alt="图1"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306031922765.png" alt="图2"></p>
-<h2 id="web18"><a href="#web18" class="headerlink" title="web18"></a>web18</h2><p>考点：审查js代码</p>
-<blockquote>
-<p>查看了源码，发现只有js和css文件，然后查看数据包，没有需要信息，再用dirb扫一波，发现只有没用的loin.php，最后没有办法查看提示，发现是新接触的题型，对js进行审计，发现了game_over一开始为false，然后socre&gt;100的时候输出一些编码信息(图1)，然后直接对该信息进行unicode解码，发现是图2信息，然后根据提示看到flag，一开始题目也给了101分钟也是一种提示。</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306032213677.png" alt="图1"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306032214501.png" alt="图2"></p>
-<p><a target="_blank" rel="noopener" href="https://www.toolhelper.cn/EncodeDecode/UnicodeChineseEncodeDecode">解码工具</a></p>
-<h2 id="web19"><a href="#web19" class="headerlink" title="web19"></a>web19</h2><p>考点：泄露重要信息在前端</p>
-<blockquote>
-<p>查看源码发现了重要信息(图1)，知道设置了username和pazzword并且这些值等于图上的值的时候echo flag，而且上面有对pazzword进行加密，所以直接用hackbar进行传输username和pazzword的明文，获取到flag</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202306032241325.png" alt="图1"></p>
-<blockquote>
-<p>直接传递POST会将文明直接发送给服务器，但是这可能被拦截，所以会在前端进行一定的数据加密</p>
-</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/linuxsec/articles/12078206.html">一句话木马原理和变形</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/BYZY1314/article/details/127792228">一句话木马的使用</a></p>
 
                 
             </div>
@@ -599,13 +534,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/05/30/robots%E5%8D%8F%E8%AE%AE/">
+                <a href="/2023/06/04/Buff/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="了解robots协议">
+                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="Buff的Web">
                         
-                        <span class="card-title">了解robots协议</span>
+                        <span class="card-title">Buff的Web</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -616,14 +551,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-30
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-04
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/" class="post-category">
-                                    基础认识
+                            <a href="/categories/%E9%A2%98%E7%9B%AE%E9%9B%86/" class="post-category">
+                                    题目集
                                 </a>
                             
                             
@@ -633,8 +568,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Web/">
-                        <span class="chip bg-color">Web</span>
+                    <a href="/tags/Buff/">
+                        <span class="chip bg-color">Buff</span>
                     </a>
                     
                 </div>
@@ -648,13 +583,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/28/Referer/">
+                <a href="/2023/06/01/%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="了解Referer">
+                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/7.jpg" class="responsive-img" alt="源码泄露">
                         
-                        <span class="card-title">了解Referer</span>
+                        <span class="card-title">源码泄露</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -665,7 +600,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-01
                             </span>
                         <span class="publish-author">
                             
@@ -682,8 +617,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Web/">
-                        <span class="chip bg-color">Web</span>
+                    <a href="/tags/CTF/">
+                        <span class="chip bg-color">CTF</span>
                     </a>
                     
                 </div>
@@ -886,7 +821,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6k</span>&nbsp;字
+                class="white-color">6.4k</span>&nbsp;字
             
             
             
