@@ -415,21 +415,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-10-16
+                    2023-10-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    3.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    15 分
                 </div>
                 
 
@@ -605,7 +605,7 @@
 <p>即：D<del>k2</del>[C] &#x3D;  X &#x3D; E<del>k1</del>[P]时候k1和k2是正确的</p>
 </blockquote>
 <p>破译复杂度：2^57量级</p>
-<h4 id="三重DES"><a href="#三重DES" class="headerlink" title="三重DES"></a>三重DES</h4><p>使用三个密钥对信息进行<strong>加密解密</strong>操作,当k1&#x3D;k3的时候成为双密钥三重DES</p>
+<h4 id="三重DES"><a href="#三重DES" class="headerlink" title="三重DES"></a>三重DES</h4><p>使用三个密钥对信息进行<strong>加密解密</strong>操作,当k1&#x3D;k3的时候称为双密钥三重DES</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202310161015073.png"></p>
 <p>加密：C&#x3D;E<del>k1</del>[D<del>k2</del>[E<del>k3</del>[P]]]</p>
 <p>解密：P&#x3D;D<del>k3</del>[D<del>k2</del>[D<del>K1</del>[C]]]</p>
@@ -779,7 +779,7 @@
 <p><strong>(5)列混淆</strong></p>
 <p>列混淆操作是 AES 算法中主要的扩散元素，对状态矩阵(明文分组)中的<strong>每列进行独立操作</strong>，它混淆了输入矩阵的每一列，使输入的每个字节都会影响到 4 个输出字节。【使用定义的固定矩阵进行列混淆】</p>
 <p>(1)计算值为固定矩阵的行 * 状态矩阵的列为对应的位置值</p>
-<p><img src="https://img-blog.csdnimg.cn/20210118193857372.png#pic_center"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202310162315286.png"></p>
 <p>其中b<del>0</del> &#x3D; 02 * a<del>0</del>  异或 03 * a<del>1</del> 异或 01 * a<del>2</del> 异或 01 *a<del>3</del></p>
 <p><strong>下面是一些相关知识</strong></p>
 <blockquote>
@@ -839,6 +839,109 @@
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46395886/article/details/112793345">AES参考</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1MU4y1R78n/?spm_id_from=333.337.search-card.all.click&vd_source=c8b3856a0cd807d6be613d8a200b9b49">列混淆计算视频</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46395886/article/details/112793345">列混淆推算及步骤</a></p>
+<h4 id="分组密码的工作模式"><a href="#分组密码的工作模式" class="headerlink" title="分组密码的工作模式"></a>分组密码的工作模式</h4><p>(1)<strong>电子密码本模式</strong>（ECB）</p>
+<p>使用<strong>相同的密钥</strong>对每个明文分组进行加密，必要时会对最后一个明文分组进行填充。</p>
+<p>加密：C<del>i</del>  &#x3D; E<del>k</del>(P<del>i</del>)</p>
+<p><strong>直接使用密钥k对当前明文组进行加密就可以得到当前密文组</strong></p>
+<p>解密：P<del>i</del>  &#x3D; D<del>k</del>(C<del>i</del>)</p>
+<p><strong>直接使用密钥k对当前密文组进行解密就可以得到当前明文组</strong></p>
+<blockquote>
+<p>优点：</p>
+<ul>
+<li>简单，利于并行计算</li>
+<li>解密误差不会被传递</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>无法隐藏明文的固定格式</li>
+<li>可能存在对明文分组的攻击</li>
+<li>传输丢失比特会影响正确解密</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202310181026235.png"></p>
+<p>(2)<strong>密文分组链接模式</strong>(CBC)</p>
+<p>CBC模式下加密算法的输入是<strong>当前的明文组和上一个密文组的异或</strong>，进行加密后，输出为当前密文组。</p>
+<p>加密：C<del>0</del> &#x3D; IV</p>
+<p>​			C<del>i</del> &#x3D; E<del>k</del>(P<del>i</del>  异或  C<del>i-1</del>)</p>
+<p><strong>每个明文组和上一个密文组进行异或后再加密，就可以得到当前密文组</strong></p>
+<p>加密：C<del>0</del> &#x3D; IV</p>
+<p>​			M<del>i</del> &#x3D; D<del>k</del>(C<del>i</del>) 异或 C<del>i-1</del></p>
+<p><strong>每个密文组分别进行解密，再与上一个密文组进行异或就可以得到当前明文组</strong><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202310181026176.png"></p>
+<blockquote>
+<p>优点：</p>
+<ul>
+<li>解决的ECB的缺点</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>解密误差会被传递，一个明文解密错误会影响下一个明文解密</li>
+<li>不利于并行运算</li>
+<li>需要初始化向量IV，并对IV进行严格控制</li>
+</ul>
+<p><strong>注意：</strong></p>
+<ul>
+<li>加密过程中无法对中间的明文进行加密，需要知道<strong>前面的明文和IV</strong></li>
+<li>解密过程中单个密文组损坏(<strong>不是长度损坏那种</strong>)只会影响当前明文和下一个明文的解密。【密文组已经是正确得出了的，后续可能因为某部分原因导致单个密文组损坏，但是其他密文组是好的，所以才影响两个明文组解密】</li>
+</ul>
+</blockquote>
+<p>(3)<strong>密文反馈模式</strong>(CFB)</p>
+<ul>
+<li><p>CFB是流密码，特征是<strong>明文本身并没有进入加密算法中进行加密，而是与加密函数的输出选择进行异或，得到了密文</strong>。</p>
+</li>
+<li><p>CFB模式下，<strong>加密算法的分组长度（假设为b位，即移位寄存器，初始为IV）</strong>不会影响<strong>明文的分组长度（假设为s位）</strong>，<strong>明文的分组长度s一般是任意的</strong>(明文长度必须是s的倍数)，如果s&#x3D;1则一位一位地加密，如果s&#x3D;8则八位八位地加密。</p>
+</li>
+</ul>
+<p>加密解密内容：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202310181052186.png"></p>
+<blockquote>
+<p>加密函数：输入b位的移位寄存器，值为初始化向量IV</p>
+<ul>
+<li><p>加密函数输出最左边的s位与明文的第一个分段P<del>1</del>异或得到密文的第一个单元C<del>1</del>，然后将密文发送出去接着<strong>移位寄存器左移s位</strong>，<strong>C<del>1</del>填入移位寄存器的最右边s位</strong>。</p>
+</li>
+<li><p>解密的时候，将收到的<strong>密文单元与加密函数的输出异或</strong>得到明文单元。</p>
+</li>
+</ul>
+<p>其中LSB函数的作用是取低b-s位，MSB函数的作用是取高S位</p>
+<p>如LSB<del>3</del>(111011<strong>011</strong>) &#x3D; 011,MSB<del>4</del>(<strong>1110</strong>11011) &#x3D; 1110</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202310181044830.png"></p>
+<blockquote>
+<p>优点：</p>
+<ul>
+<li>隐藏了明文模式，加密后难以发现固定模式</li>
+<li>分组密码转化为流密码，明文不参与加密函数</li>
+<li>可以选择明文长度进行加密，更加灵活</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>不利于并行计算</li>
+<li>解密误差会被传递</li>
+<li>解密出错影响[b&#x2F;s]个分组</li>
+<li>加密出错影响b+1个分组</li>
+</ul>
+</blockquote>
+<p>(4)<strong>输出反馈模式</strong>(OFB)</p>
+<p>输出反馈模式通过<strong>反复加密</strong>初始向量IV来得到密钥流Z<del>k</del></p>
+<p>密钥流：Z<del>k</del>  &#x3D; E<del>k</del>(Z<del>k-1</del>)  [1≤k≤n]</p>
+<p>加密：C<del>i</del> &#x3D; P<del>i</del>  异或 Z<del>i</del> </p>
+<p><strong>当前密文等于当前明文异或当前密钥Z<del>i</del></strong></p>
+<p>解密：P<del>i</del> &#x3D; C<del>i</del>  异或 Z<del>i</del></p>
+<p><strong>当前明文等于当前密文异或当前密钥Z<del>i</del></strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202310181123812.png"></p>
+<blockquote>
+<p>优点：</p>
+<ul>
+<li>可以并行计算</li>
+<li>可以加密任意长度的明文(<strong>每次加密使用不同的IV</strong>)</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>对明文的主动攻击是可能的</li>
+<li>IV加密存在误差传送</li>
+</ul>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xzj8023tp/p/12970790.html">参考</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_50984266/article/details/108896013">参考</a></p>
 
                 
             </div>
@@ -1176,7 +1279,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">22.6k</span>&nbsp;字
+                class="white-color">23.7k</span>&nbsp;字
             
             
             
