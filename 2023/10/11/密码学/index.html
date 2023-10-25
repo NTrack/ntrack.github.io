@@ -415,7 +415,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-10-18
+                    2023-10-25
                 </div>
                 
 
@@ -717,12 +717,12 @@
 <p>密钥拓展将一个128位的密钥扩展10次变成11个128位的密钥来用于接下来的轮密钥加操作</p>
 <blockquote>
 <p>拓展步骤：</p>
-<p>当i为4的倍数的时候：W[i] &#x3D; W[i-4] 异或 W[i-1]</p>
-<p>当i不为4的倍数的时候：W[i] &#x3D; W[i-4] 异或 T(W[i-1])</p>
+<p>当i不为4的倍数的时候：W[i] &#x3D; W[i-4] 异或 W[i-1]</p>
+<p>当i为4的倍数的时候：W[i] &#x3D; W[i-4] 异或 T(W[i-1])</p>
 <blockquote>
 <p>T函数：</p>
 <ul>
-<li>字循环：将W[i-1]向左移动(即矩阵中向上移动一个字节)</li>
+<li>字循环：将W[i-1]向左移动(即在矩阵中的列向上移动一个字节)</li>
 <li>字节替换：使用给定的S盒进行替换(第一个字节为行，第二个字节为列)</li>
 <li>轮常量异或：将字节替换的结果与对应轮常量进行异或，i代表轮数</li>
 </ul>
@@ -826,13 +826,14 @@
 <ol start="2">
 <li>相乘</li>
 </ol>
-<p>  (x^6 + x^4 + x^2 + x + 1)  *  (x^7 + x + 1) &#x3D; (x^13 + x^11 + x^9 + x^8 + x^7)  异或  (x^7 + x^5  + x^3 + x^2 + x)  异或  (x^6 + x^4 + x^2 + x + 1)  &#x3D; (x^13 + x^11 + x^9 + x^8 + x^6 + x^5 + x^4 + x^3 + 1)</p>
-<p>  <strong>多项式最高次幂≥8需要进行模不可约多项式运算</strong><br>  (x^13 + x^11 + x^9 + x^8 + x^6 + x^5 + x^4 + x^3 + 1) mod ( x^8 + x^4 + x^3 + x + 1) &#x3D; x^7 + x^6 + 1</p>
+<p> (x^6 + x^4 + x^2 + x + 1)  *  (x^7 + x + 1) &#x3D; (x^13 + x^11 + x^9 + x^8 + x^7)  异或  (x^7 + x^5  + x^3 + x^2 + x)  异或  (x^6 + x^4 + x^2 + x + 1)  &#x3D; (x^13 + x^11 + x^9 + x^8 + x^6 + x^5 + x^4 + x^3 + 1)</p>
+<p> <strong>多项式最高次幂≥8需要进行模不可约多项式运算</strong><br> (x^13 + x^11 + x^9 + x^8 + x^6 + x^5 + x^4 + x^3 + 1) mod ( x^8 + x^4 + x^3 + x + 1) &#x3D; x^7 + x^6 + 1</p>
 <blockquote>
 <p>将多项式转化成二进制进行除法运算得出余数为所求结果</p>
 <p>(x^13 + x^11 + x^9 + x^8 + x^6 + x^5 + x^4 + x^3 + 1)  &#x3D; （10101101111001)<del>2</del></p>
 <p>( x^8 + x^4 + x^3 + x + 1)  &#x3D; (100011011)<del>2</del></p>
 <p><img src="https://cdn.jsdelivr.net/gh/ntrack/blog_img/img/202310162215996.jpg"></p>
+<p><strong>修正：是最高次幂＞8</strong></p>
 </blockquote>
 </blockquote>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/480298447#:~:text=%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%B0%B1%E6%98%AF%E6%8A%8A%E4%B9%8B%E5%89%8D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%93%8D%E4%BD%9C%E6%95%B4%E5%90%88%E8%B5%B7%E6%9D%A5%EF%BC%8C%E8%BF%99%E9%87%8C%E8%BF%98%E6%98%AF%E6%8B%BF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84,AES-128%E4%BD%8D%E3%80%81ECB%E6%A8%A1%E5%BC%8F%20%E4%B8%BE%E4%BE%8B%EF%BC%8C128%E4%BD%8D%E5%AF%B9%E5%BA%94%E7%9A%84%E5%8A%A0%E5%AF%86%E8%BD%AE%E6%95%B0%E6%98%AF10%E8%BD%AE%EF%BC%8C%E5%85%B6%E4%B8%AD%E8%BD%AE%E5%AF%86%E9%92%A5%E5%8A%A0%E7%B4%AF%E8%AE%A111%E6%AC%A1%EF%BC%8C%E9%80%9A%E8%BF%87%E4%B9%8B%E5%89%8D%E7%9A%84%E4%BB%8B%E7%BB%8D%E6%88%91%E4%BB%AC%E7%9F%A5%E9%81%93%E5%8F%AA%E6%9C%89%E8%BD%AE%E5%AF%86%E9%92%A5%E4%B8%AD%E4%BC%9A%E7%94%A8%E5%88%B0%E5%AF%86%E9%92%A5%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%AF%86%E9%92%A5%E7%9A%84%E9%95%BF%E5%BA%A6%E4%B8%BA128%E4%BD%8D16%E5%AD%97%E8%8A%82%E7%BB%8F%E8%BF%8710%E6%AC%A1%E6%89%A9%E5%B1%95%E4%B9%8B%E5%90%8E%E6%AD%A3%E5%A5%BD%E6%BB%A1%E8%B6%B311%E6%AC%A1%E8%BD%AE%E5%AF%86%E9%92%A5%E5%8A%A0%E7%9A%84%E9%9C%80%E8%A6%81%E3%80%82">AES参考</a></p>
